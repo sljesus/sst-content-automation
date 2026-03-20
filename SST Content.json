@@ -37,7 +37,7 @@
     {
       "parameters": {
         "promptType": "define",
-        "text": "=You are an expert market researcher and content creator for SST México.\nSST México sells:\n- n8n automations\n- AI voice agents\n- GHL CRM (all-in-one)\n- Create/fix automations\n- WhatsApp Business\nYOUR TASK:\n1. Based on this niche and keywords, identify 1 SPECIFIC pain point that businesses face in 2026\n2. Generate content to attract leads for SST México services\nNiche: {{ $json.nicho }}\nKeywords: {{ $json.keywords }}\nReturn your response as valid JSON ONLY (no markdown, no explanation):\n{\n  \"dolor\": \"The specific pain point in 1 sentence\",\n  \"tema\": \"Attractive post title (5 words max)\",\n  \"caption\": \"Instagram/Facebook caption (3-5 lines with emojis, curiosity first about the problem, then show how SST México solves it, end with CTA like 'Comment INFO or DM')\",\n  \"promptImagen\": \"English description for AI image generation (visual scene showing the problem or solution, professional modern business, NO text, NO people with text on clothes)\"\n}\nNota: Solo genera el JSON, sin texto adicional. El siguiente nodo va a parsear esto.\n",
+        "text": "=You are an expert market researcher and content creator for SST México.\nSST México sells:\n- n8n automations\n- AI voice agents\n- GHL CRM (all-in-one)\n- Create/fix automations\n- WhatsApp Business\nYOUR TASK:\n1. Based on this niche and keywords, identify 1 SPECIFIC pain point that businesses face in 2026\n2. Generate content to attract leads for SST México services\nNiche: {{ $json.nicho }}\nKeywords: {{ $json.keywords }}\nReturn your response as valid JSON ONLY (no markdown, no explanation):\n{\n  \"dolor\": \"The specific pain point in 1 sentence\",\n  \"tema\": \"Attractive post title (5 words max)\",\n  \"caption\": \"Instagram/Facebook caption (3-5 lines with emojis, curiosity first about the problem, then show how SST México solves it, end with CTA like 'Comment INFO or DM')\",\n  \"promptImagen\": \"English description for AI image generation. Scene showing the problem or solution with a professional business aesthetic. MUST include a random animal wearing a business suit - PRIORITIZE CATS, but you can also use dogs, penguins, or rabbits in suits. The animal should be the focal point or prominently featured. NO text, NO people with text on clothes. Modern, clean, corporate style.\"\n}\nNota: Solo genera el JSON, sin texto adicional. El siguiente nodo va a parsear esto.\n",
         "hasOutputParser": true,
         "options": {}
       },
@@ -133,7 +133,7 @@
           "mode": "list",
           "cachedResultName": "models/gemini-2.5-flash-image (Nano Banana)"
         },
-        "prompt": "=Crea una imagen profesional de marketing para Instagram/Facebook de una clínica dental. Escena visual: {{ $json.promptImagen }}. Incluye este texto prominente en el diseño: \"{{ $json.tema }}\". Estilo moderno, limpio, corporativo.",
+        "prompt": "=Crea una imagen profesional de marketing para Instagram/Facebook. Escena visual: {{ $json.promptImagen }}. Incluye este texto prominente en el diseño, ASEGURÁNDOTE DE QUE NO TENGA FALTAS DE ORTOGRAFÍA: \"{{ $json.tema }}\". La imagen DEBE incluir un animal con traje de negocios (PRIORIZAR GATOS, también puedes usar perros, pingüinos o conejos con traje). Estilo moderno, limpio, corporativo.",
         "options": {}
       },
       "type": "@n8n/n8n-nodes-langchain.googleGemini",
@@ -294,11 +294,11 @@
     "callerPolicy": "workflowsFromSameOwner",
     "availableInMCP": true
   },
-  "versionId": "65079c7b-711d-4777-9d97-9ebce4809a8e",
+  "versionId": "1773988199933",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "fab9f3ff2b7568fc6571b1133cdeedbc6f1cec20202daf1c2e3e5f0a179f140a"
   },
-  "id": "pV1BBhjlgMzQZc28",
+  "id": "sst-content-modular",
   "tags": []
 }
