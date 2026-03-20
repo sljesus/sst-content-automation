@@ -6,7 +6,8 @@
         "rule": {
           "interval": [
             {
-              "field": "cron"
+              "field": "cronExpression",
+              "expression": "0 8 * * *"
             }
           ]
         }
@@ -288,12 +289,12 @@
       ]
     }
   },
-  "active": false,
+  "active": true,
   "settings": {
     "callerPolicy": "workflowsFromSameOwner",
     "availableInMCP": true
   },
-  "versionId": "a2cfdf7a-e757-4178-8913-484d1049a2aa",
+  "versionId": "65079c7b-711d-4777-9d97-9ebce4809a8e",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "fab9f3ff2b7568fc6571b1133cdeedbc6f1cec20202daf1c2e3e5f0a179f140a"
