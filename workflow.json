@@ -51,6 +51,44 @@
       }
     },
     {
+      "id": "ea321ab1-9f4e-4519-abf3-9d1b228bd70e",
+      "name": "OpenAI Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        2600,
+        880
+      ],
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-5-mini"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "credentials": {
+        "openAiApi": {
+          "id": "znZHvf89ytzMu9vi",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "id": "d733760c-fb91-4b4e-9395-619dc0efcc7f",
+      "name": "Structured Output Parser",
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [
+        2728,
+        880
+      ],
+      "parameters": {
+        "jsonSchemaExample": "{\n  \"parameters\": {\n    \"jsCode\": \"// Define el schema del output\\nconst schema = {\\n  type: 'object',\\n  properties: {\\n    dolor: {\\n      type: 'string',\\n      description: 'The specific pain point in 1 sentence'\\n    },\\n    tema: {\\n      type: 'string',\\n      description: 'Attractive post title (5 words max)'\\n    },\\n    caption: {\\n      type: 'string',\\n      description: 'Instagram/Facebook caption with emojis, curiosity first, then solution, CTA at end'\\n    },\\n    promptImagen: {\\n      type: 'string',\\n      description: 'English prompt for AI image (visual scene, professional, NO text)'\\n    }\\n  },\\n  required: ['dolor', 'tema', 'caption', 'promptImagen']\\n};\\n\\nreturn [{json: {schema}}];\"\n  },\n  \"id\": \"structured-output-parser\",\n  \"name\": \"Structured Output Parser\",\n  \"type\": \"n8n-nodes-base.code\",\n  \"typeVersion\": 2,\n  \"position\": [2560, 1120]\n}"
+      }
+    },
+    {
       "id": "a07c388c-b21b-4044-b806-7a0bf9991758",
       "name": "Preparar Contenido1",
       "type": "n8n-nodes-base.code",
@@ -61,6 +99,29 @@
       ],
       "parameters": {
         "jsCode": "// Extraer respuesta del AI Agent\nvar raw = $input.first().json;\nvar content = raw.output?.parameters?.jsCode || raw.text || raw.content || JSON.stringify(raw);\nvar data = {};\n\n// Limpiar markdown si existe\ncontent = content.replace(/```json\\n?/gi, '').replace(/```\\n?/gi, '').trim();\n\n// Combinar con datos del nicho original\nvar nichoOriginal = $('Seleccionar Nicho').first().json;\n\ntry {\n  data = JSON.parse(content);\n} catch(e) {\n  data.nicho = nichoOriginal.nicho || '';\n  data.tema = 'Contenido SST';\n  data.caption = content;\n  data.promptImagen = 'modern business office team working together';\n  data.dolor = '';\n}\n\n// Asegurar que tenemos el nicho\nif (!data.nicho) data.nicho = nichoOriginal.nicho;\n\nreturn [{\n  json: {\n    nicho: data.nicho || '',\n    dolor: data.dolor || '',\n    tema: data.tema || 'Post SST',\n    caption: data.caption || '',\n    promptImagen: data.promptImagen || 'modern business office'\n  }\n}];"
+      }
+    },
+    {
+      "id": "a9b16fdf-58e6-4e64-885b-58242998cb53",
+      "name": "Telegram1",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        3568,
+        672
+      ],
+      "webhookId": "c31de2bd-d38f-4821-8f93-82719f7fdb3b",
+      "parameters": {
+        "operation": "sendPhoto",
+        "chatId": "6179550906",
+        "binaryData": true,
+        "additionalFields": {}
+      },
+      "credentials": {
+        "telegramApi": {
+          "id": "f7HHAcqHq1XJUQ2w",
+          "name": "Telegram account"
+        }
       }
     },
     {
@@ -101,29 +162,6 @@
       ],
       "parameters": {
         "jsCode": "var imagenData = $input.first();\nvar contenido = $('Preparar Contenido1').first().json;\nreturn [{\n  json: contenido,\n  binary: {\n    data: imagenData.binary.data\n  }\n}];"
-      }
-    },
-    {
-      "id": "a9b16fdf-58e6-4e64-885b-58242998cb53",
-      "name": "Telegram1",
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "position": [
-        3568,
-        672
-      ],
-      "webhookId": "c31de2bd-d38f-4821-8f93-82719f7fdb3b",
-      "parameters": {
-        "operation": "sendPhoto",
-        "chatId": "6179550906",
-        "binaryData": true,
-        "additionalFields": {}
-      },
-      "credentials": {
-        "telegramApi": {
-          "id": "f7HHAcqHq1XJUQ2w",
-          "name": "Telegram account"
-        }
       }
     },
     {
@@ -231,6 +269,28 @@
       "main": [
         []
       ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "active": false,
@@ -241,6 +301,6 @@
     "templateCredsSetupCompleted": true,
     "instanceId": "fab9f3ff2b7568fc6571b1133cdeedbc6f1cec20202daf1c2e3e5f0a179f140a"
   },
-  "versionId": "1773986963896",
+  "versionId": "1773987442134",
   "id": "sst-content-modular"
 }

@@ -2,7 +2,10 @@
  * SST Content Workflow Builder
  * 
  * Lee todos los nodos de /nodes/ en orden y genera workflow.json
- * Soporta conexiones especiales definidas en /connections.json
+ * 
+ * Conexiones especiales en connections.json:
+ * - _main: array con el orden del flujo principal
+ * - otros nodos: conexiones no-sequenciales (sub-nodos, etc)
  * 
  * Uso: node build.js
  */
@@ -30,7 +33,7 @@ function loadNodes() {
   });
 }
 
-// Cargar conexiones especiales (las que NO son cadena simple)
+// Cargar conexiones especiales
 function loadSpecialConnections() {
   if (fs.existsSync(CONNECTIONS_FILE)) {
     return JSON.parse(fs.readFileSync(CONNECTIONS_FILE, 'utf8'));
@@ -42,28 +45,18 @@ function loadSpecialConnections() {
 function buildConnections(nodes, specialConnections) {
   const connections = {};
   
-  // Ordenar nodos por posición X para determinar el flujo principal
-  const sortedNodes = [...nodes].sort((a, b) => a.position[0] - b.position[0]);
+  // Extraer el flujo principal
+  const mainFlow = specialConnections._main || [];
   
-  // Aplicar conexiones especiales primero
-  for (const [sourceName, specialOutputs] of Object.entries(specialConnections)) {
-    connections[sourceName] = specialOutputs;
-  }
-  
-  // Construir flujo principal secuencial para nodos sin conexión especial
-  sortedNodes.forEach((node, index) => {
-    if (connections[node.name]) {
-      // Ya tiene conexión especial definida
-      return;
-    }
-    
-    if (index < sortedNodes.length - 1) {
-      // Conectar al siguiente nodo en la secuencia
-      connections[node.name] = {
+  // Construir conexiones del flujo principal
+  for (let i = 0; i < mainFlow.length; i++) {
+    const nodeName = mainFlow[i];
+    if (i < mainFlow.length - 1) {
+      connections[nodeName] = {
         main: [
           [
             {
-              node: sortedNodes[index + 1].name,
+              node: mainFlow[i + 1],
               type: 'main',
               index: 0
             }
@@ -72,13 +65,19 @@ function buildConnections(nodes, specialConnections) {
       };
     } else {
       // Último nodo - sin salida
-      connections[node.name] = {
+      connections[nodeName] = {
         main: [
           []
         ]
       };
     }
-  });
+  }
+  
+  // Agregar conexiones especiales (sub-nodos)
+  for (const [sourceName, outputs] of Object.entries(specialConnections)) {
+    if (sourceName === '_main') continue; // Skip el array de flujo
+    connections[sourceName] = outputs;
+  }
   
   return connections;
 }
@@ -91,9 +90,22 @@ function buildWorkflow() {
   console.log(`📦 Encontrados ${nodes.length} nodos:`);
   nodes.forEach(n => console.log(`   - ${n.name}`));
   
-  if (Object.keys(specialConnections).length > 0) {
+  const mainFlow = specialConnections._main || [];
+  if (mainFlow.length > 0) {
+    console.log(`\n🔗 Flujo principal:`);
+    mainFlow.forEach((name, i) => {
+      if (i < mainFlow.length - 1) {
+        console.log(`   ${name} → ${mainFlow[i + 1]}`);
+      }
+    });
+  }
+  
+  // Mostrar conexiones especiales
+  const specialCount = Object.keys(specialConnections).length - (mainFlow.length > 0 ? 1 : 0);
+  if (specialCount > 0) {
     console.log(`\n🔗 Conexiones especiales:`);
     for (const [source, outputs] of Object.entries(specialConnections)) {
+      if (source === '_main') continue;
       const outputTypes = Object.keys(outputs);
       console.log(`   - ${source} → [${outputTypes.join(', ')}]`);
     }
