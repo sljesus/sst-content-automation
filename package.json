@@ -1,0 +1,11 @@
+{
+  "name": "sst-content-automation",
+  "version": "1.0.0",
+  "description": "SST Content generation workflow for n8n - modular version",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "keywords": ["n8n", "workflow", "automation"],
+  "author": "",
+  "license": "MIT"
+}

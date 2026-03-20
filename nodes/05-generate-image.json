@@ -1,0 +1,24 @@
+{
+  "id": "5a4ccca3-4227-4a1b-baaf-fab6bc67f370",
+  "name": "Generate an image",
+  "type": "@n8n/n8n-nodes-langchain.googleGemini",
+  "typeVersion": 1.1,
+  "position": [3152, 656],
+  "parameters": {
+    "resource": "image",
+    "modelId": {
+      "__rl": true,
+      "value": "models/gemini-2.5-flash-image",
+      "mode": "list",
+      "cachedResultName": "models/gemini-2.5-flash-image (Nano Banana)"
+    },
+    "prompt": "=Crea una imagen profesional de marketing para Instagram/Facebook de una clínica dental. Escena visual: {{ $json.promptImagen }}. Incluye este texto prominente en el diseño: \"{{ $json.tema }}\". Estilo moderno, limpio, corporativo.",
+    "options": {}
+  },
+  "credentials": {
+    "googlePalmApi": {
+      "id": "lST2WBhirOMgFv8w",
+      "name": "Google Gemini(PaLM) Api account"
+    }
+  }
+}

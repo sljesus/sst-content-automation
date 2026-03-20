@@ -1,0 +1,20 @@
+{
+  "id": "a9b16fdf-58e6-4e64-885b-58242998cb53",
+  "name": "Telegram1",
+  "type": "n8n-nodes-base.telegram",
+  "typeVersion": 1.2,
+  "position": [3568, 672],
+  "webhookId": "c31de2bd-d38f-4821-8f93-82719f7fdb3b",
+  "parameters": {
+    "operation": "sendPhoto",
+    "chatId": "6179550906",
+    "binaryData": true,
+    "additionalFields": {}
+  },
+  "credentials": {
+    "telegramApi": {
+      "id": "f7HHAcqHq1XJUQ2w",
+      "name": "Telegram account"
+    }
+  }
+}

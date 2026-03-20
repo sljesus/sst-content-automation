@@ -1,0 +1,246 @@
+{
+  "name": "SST Content",
+  "nodes": [
+    {
+      "id": "8173fff2-0e20-4bff-9c1a-ddde2b7dc0d0",
+      "name": "Trigger (8am)",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        2144,
+        656
+      ],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 8 * * *"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "f40c86d9-cf24-4627-8eba-cb6084e91e5b",
+      "name": "Seleccionar Nicho",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2368,
+        656
+      ],
+      "parameters": {
+        "jsCode": "// Nichos a investigar\nvar nichos = [\n  {nicho: \"restaurantes\", keywords: \"problemas whatsapp, clientes que no reservan, facturacion lenta\"},\n  {nicho: \"gimnasios\", keywords: \"membresias que se vencen, alumnos que abandonan, cobros automaticos\"},\n  {nicho: \"abogados\", keywords: \"seguimiento de casos, clientes que no pagan, reuniones perdidas\"},\n  {nicho: \"contadores\", keywords: \"facturas atrasadas, clientes morosos, declaraciones tardias\"},\n  {nicho: \"clinicas medicas\", keywords: \"citas que no asisten, recordatorios, cobros seguros\"},\n  {nicho: \"agencias de marketing\", keywords: \"leads que se enfrían, clientes sin seguimiento, reportes\"},\n  {nicho: \"tiendas online\", keywords: \"carritos abandonados, respuestas lentas, inventario desactualizado\"},\n  {nicho: \"bienes raices\", keywords: \"prospectos que desaparecen, visitas perdidas, seguimiento lento\"},\n  {nicho: \"consultorios dentales\", keywords: \"citas canceladas, presupuestos sin responder, rappel de tratamiento\"},\n  {nicho: \"autolavados\", keywords: \"citas que no llegan, clientes nuevos que no regresan, promociones\"}\n];\n\n// Seleccionar 1 nicho aleatorio\nvar nicho = nichos[Math.floor(Math.random() * nichos.length)];\n\nreturn [{json: nicho}];"
+      }
+    },
+    {
+      "id": "5023127d-6a2f-4a7a-90b3-afef06ef9b1b",
+      "name": "AI Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        2592,
+        656
+      ],
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are an expert market researcher and content creator for SST México.\nSST México sells:\n- n8n automations\n- AI voice agents\n- GHL CRM (all-in-one)\n- Create/fix automations\n- WhatsApp Business\nYOUR TASK:\n1. Based on this niche and keywords, identify 1 SPECIFIC pain point that businesses face in 2026\n2. Generate content to attract leads for SST México services\nNiche: {{ $json.nicho }}\nKeywords: {{ $json.keywords }}\nReturn your response as valid JSON ONLY (no markdown, no explanation):\n{\n  \"dolor\": \"The specific pain point in 1 sentence\",\n  \"tema\": \"Attractive post title (5 words max)\",\n  \"caption\": \"Instagram/Facebook caption (3-5 lines with emojis, curiosity first about the problem, then show how SST México solves it, end with CTA like 'Comment INFO or DM')\",\n  \"promptImagen\": \"English description for AI image generation (visual scene showing the problem or solution, professional modern business, NO text, NO people with text on clothes)\"\n}\nNota: Solo genera el JSON, sin texto adicional. El siguiente nodo va a parsear esto.\n",
+        "hasOutputParser": true,
+        "options": {}
+      }
+    },
+    {
+      "id": "a07c388c-b21b-4044-b806-7a0bf9991758",
+      "name": "Preparar Contenido1",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2944,
+        656
+      ],
+      "parameters": {
+        "jsCode": "// Extraer respuesta del AI Agent\nvar raw = $input.first().json;\nvar content = raw.output?.parameters?.jsCode || raw.text || raw.content || JSON.stringify(raw);\nvar data = {};\n\n// Limpiar markdown si existe\ncontent = content.replace(/```json\\n?/gi, '').replace(/```\\n?/gi, '').trim();\n\n// Combinar con datos del nicho original\nvar nichoOriginal = $('Seleccionar Nicho').first().json;\n\ntry {\n  data = JSON.parse(content);\n} catch(e) {\n  data.nicho = nichoOriginal.nicho || '';\n  data.tema = 'Contenido SST';\n  data.caption = content;\n  data.promptImagen = 'modern business office team working together';\n  data.dolor = '';\n}\n\n// Asegurar que tenemos el nicho\nif (!data.nicho) data.nicho = nichoOriginal.nicho;\n\nreturn [{\n  json: {\n    nicho: data.nicho || '',\n    dolor: data.dolor || '',\n    tema: data.tema || 'Post SST',\n    caption: data.caption || '',\n    promptImagen: data.promptImagen || 'modern business office'\n  }\n}];"
+      }
+    },
+    {
+      "id": "5a4ccca3-4227-4a1b-baaf-fab6bc67f370",
+      "name": "Generate an image",
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1.1,
+      "position": [
+        3152,
+        656
+      ],
+      "parameters": {
+        "resource": "image",
+        "modelId": {
+          "__rl": true,
+          "value": "models/gemini-2.5-flash-image",
+          "mode": "list",
+          "cachedResultName": "models/gemini-2.5-flash-image (Nano Banana)"
+        },
+        "prompt": "=Crea una imagen profesional de marketing para Instagram/Facebook de una clínica dental. Escena visual: {{ $json.promptImagen }}. Incluye este texto prominente en el diseño: \"{{ $json.tema }}\". Estilo moderno, limpio, corporativo.",
+        "options": {}
+      },
+      "credentials": {
+        "googlePalmApi": {
+          "id": "lST2WBhirOMgFv8w",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "id": "e7b25581-46e4-48e5-b08d-a029f05ad180",
+      "name": "Code in JavaScript",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3360,
+        656
+      ],
+      "parameters": {
+        "jsCode": "var imagenData = $input.first();\nvar contenido = $('Preparar Contenido1').first().json;\nreturn [{\n  json: contenido,\n  binary: {\n    data: imagenData.binary.data\n  }\n}];"
+      }
+    },
+    {
+      "id": "a9b16fdf-58e6-4e64-885b-58242998cb53",
+      "name": "Telegram1",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        3568,
+        672
+      ],
+      "webhookId": "c31de2bd-d38f-4821-8f93-82719f7fdb3b",
+      "parameters": {
+        "operation": "sendPhoto",
+        "chatId": "6179550906",
+        "binaryData": true,
+        "additionalFields": {}
+      },
+      "credentials": {
+        "telegramApi": {
+          "id": "f7HHAcqHq1XJUQ2w",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "id": "685f816a-a91b-4faa-a3c0-f1339d7a2260",
+      "name": "Telegram",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        3776,
+        656
+      ],
+      "webhookId": "c31de2bd-d38f-4821-8f93-82719f7fdb3b",
+      "parameters": {
+        "chatId": "6179550906",
+        "text": "=nicho: {{ $('Preparar Contenido1').item.json.nicho }}\n\nDOLOR:{{ $('Preparar Contenido1').item.json.dolor }}\n\nTEMA:{{ $('Preparar Contenido1').item.json.tema }}\n\nCAPTION:{{ $('Preparar Contenido1').item.json.caption }}\n\nPROMPT UTILIZADO PARA LA IMAGEN:{{ $('Preparar Contenido1').item.json.promptImagen }}",
+        "additionalFields": {}
+      },
+      "credentials": {
+        "telegramApi": {
+          "id": "f7HHAcqHq1XJUQ2w",
+          "name": "Telegram account"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Trigger (8am)": {
+      "main": [
+        [
+          {
+            "node": "Seleccionar Nicho",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Seleccionar Nicho": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Preparar Contenido1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Preparar Contenido1": {
+      "main": [
+        [
+          {
+            "node": "Generate an image",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate an image": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "Telegram1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Telegram1": {
+      "main": [
+        [
+          {
+            "node": "Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Telegram": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "fab9f3ff2b7568fc6571b1133cdeedbc6f1cec20202daf1c2e3e5f0a179f140a"
+  },
+  "versionId": "1773986963896",
+  "id": "sst-content-modular"
+}

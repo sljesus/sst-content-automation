@@ -1,0 +1,13 @@
+{
+  "id": "5023127d-6a2f-4a7a-90b3-afef06ef9b1b",
+  "name": "AI Agent",
+  "type": "@n8n/n8n-nodes-langchain.agent",
+  "typeVersion": 3.1,
+  "position": [2592, 656],
+  "parameters": {
+    "promptType": "define",
+    "text": "=You are an expert market researcher and content creator for SST México.\nSST México sells:\n- n8n automations\n- AI voice agents\n- GHL CRM (all-in-one)\n- Create/fix automations\n- WhatsApp Business\nYOUR TASK:\n1. Based on this niche and keywords, identify 1 SPECIFIC pain point that businesses face in 2026\n2. Generate content to attract leads for SST México services\nNiche: {{ $json.nicho }}\nKeywords: {{ $json.keywords }}\nReturn your response as valid JSON ONLY (no markdown, no explanation):\n{\n  \"dolor\": \"The specific pain point in 1 sentence\",\n  \"tema\": \"Attractive post title (5 words max)\",\n  \"caption\": \"Instagram/Facebook caption (3-5 lines with emojis, curiosity first about the problem, then show how SST México solves it, end with CTA like 'Comment INFO or DM')\",\n  \"promptImagen\": \"English description for AI image generation (visual scene showing the problem or solution, professional modern business, NO text, NO people with text on clothes)\"\n}\nNota: Solo genera el JSON, sin texto adicional. El siguiente nodo va a parsear esto.\n",
+    "hasOutputParser": true,
+    "options": {}
+  }
+}
