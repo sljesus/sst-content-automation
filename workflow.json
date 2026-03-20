@@ -294,11 +294,11 @@
     "callerPolicy": "workflowsFromSameOwner",
     "availableInMCP": true
   },
-  "versionId": "1773987767879",
+  "versionId": "65079c7b-711d-4777-9d97-9ebce4809a8e",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "fab9f3ff2b7568fc6571b1133cdeedbc6f1cec20202daf1c2e3e5f0a179f140a"
   },
-  "id": "sst-content-modular",
+  "id": "pV1BBhjlgMzQZc28",
   "tags": []
 }
