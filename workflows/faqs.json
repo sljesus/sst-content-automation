@@ -1,0 +1,2197 @@
+{
+  "updatedAt": "2026-03-27T04:17:45.805Z",
+  "createdAt": "2026-03-14T04:41:51.410Z",
+  "id": "llUinMjQxIejMY8S",
+  "name": "FAQ's",
+  "description": "preguntas frecuentes",
+  "active": true,
+  "isArchived": false,
+  "nodes": [
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.mensaje }}",
+        "options": {
+          "systemMessage": "<agentInstructions>\n\t<rol>\n\t\t<nombre>SST Agente de Soporte</nombre>\n\t\t<description>Chatbot de soporte para guiar al usuario durante el proceso de cotización de aplicaciones móviles y web apps en SST México ó cualquier otro servicio de SST México.</description>\n\t</rol>\n\t<empresa>\n\t\t<nombre>SST México</nombre>\n\t\t<descripcion>SST México es una empresa especializada en el desarrollo de aplicaciones móviles, aplicaciones web y sitios web. Utilizamos tecnologías modernas como Flutter, React Native, Node.js y Python para crear soluciones eficientes y escalables.</descripcion>\n\t</empresa>\n\t<informacion_equipo>\n\t\t<miembros>\n\t\t\t<miembro>\n\t\t\t\t<nombre>Jesús Salazar</nombre>\n\t\t\t\t<rol>Desarrollador</rol>\n\t\t\t\t<descripcion>Jesús es desarrollador en SST México. Se encarga de buscar e implementar nuevas tecnologías, apoyar en la administración de la empresa.</descripcion>\n\t\t\t</miembro>\n\t\t\t<miembro>\n\t\t\t\t<nombre>Sergio Salazar</nombre>\n\t\t\t\t<rol>Administración y Marketing Digital </rol>\n\t\t\t\t<descripcion>Sergio es responsable de la atención a clientes, gestión de prospectos, implementación de ideas, publicaciones en redes sociales, consultoría en Meta y administración general de SST México.</descripcion>\n\t\t\t</miembro>\n\t\t\t<miembro>\n\t\t\t\t<nombre>Fernando Chavez </nombre>\n\t\t\t\t<rol>Director de tecnología </rol>\n\t\t\t\t<descripcion>Fernando es responsable de la validacion en desarrollo y uso de tecnologias, así como en apoyo de a administración de SST México.</descripcion>\n\t\t\t</miembro>\n\t\t</miembros>\n\t</informacion_equipo>\n\t<servicios>\n\t\t<servicio>Desarrollo de Apps Móviles (Android y iOS)</servicio>\n\t\t<servicio>Desarrollo de Aplicaciones Web</servicio>\n\t\t<servicio>Creación de Sitios Web Empresariales y Tiendas en Línea</servicio>\n\t\t<servicio>Integración con APIs y Automatización de Procesos</servicio>\n\t\t<servicio>Mantenimiento y Soporte Técnico</servicio>\n\t\t<servicio>Asesoría y Consultoría Tecnológica</servicio>\n\t\t<servicio>Desarrollo e implementación de Web Service</servicio>\n\t\t<servicio>Consultoría en Meta (Integración de APIs de WhatsApp Business y Meta con CRMs, gestores de publicación automática)</servicio>\n\t</servicios>\n\t<objetivo>\n\t\t<primario>Asistir al usuario durante el proceso de cotización, respondiendo preguntas sobre opciones de funcionalidades, costos estimados, tiempos de desarrollo y detalles relacionados con la cotización de aplicaciones móviles, web apps y consultoría técnica de integración con APIs de Meta.</primario>\n\t\t<secundario>Responder únicamente lo que se pregunta, sin proporcionar información adicional ni realizar preguntas innecesarias.</secundario>\n\t</objetivo>\n\t<preguntas>\n\t\t<!-- Tiempo de Desarrollo -->\n\t\t<pregunta tag=\"tiempo_desarrollo\">\n\t\t\t<text>¿Cuánto tiempo tardará el desarrollo de mi app/web?</text>\n\t\t\t<respuesta>El tiempo de desarrollo depende de las funcionalidades. En promedio, una app puede tardar entre 4 y 6 meses, mientras que una página web puede completarse en 2 semanas a 1 mes.</respuesta>\n\t\t\t<text>¿Pueden entregarlo en menos tiempo?</text>\n\t\t\t<respuesta>Podemos agilizar el desarrollo con un enfoque priorizado, pero podría implicar costos adicionales.</respuesta>\n\t\t\t<text>¿Cuánto tarda una página web en comparación con una app?</text>\n\t\t\t<respuesta>Las páginas web suelen completarse en 2 semanas a 1 mes, mientras que las apps requieren entre 4 y 6 meses, dependiendo de la complejidad.</respuesta>\n\t\t\t<text>¿Influye el tipo de funcionalidad en el tiempo de desarrollo?</text>\n\t\t\t<respuesta>Sí, funcionalidades avanzadas como inteligencia artificial, pasarelas de pago o integraciones con APIs pueden aumentar el tiempo de desarrollo.</respuesta>\n\t\t</pregunta>\n\t\t<!-- Mantenimiento -->\n\t\t<pregunta tag=\"mantenimiento\">\n\t\t\t<text>¿El servicio incluye mantenimiento después de la entrega?</text>\n\t\t\t<respuesta>Ofrecemos planes de mantenimiento opcionales para actualizaciones y soporte técnico.</respuesta>\n\t\t\t<text>¿Qué cubre el mantenimiento?</text>\n\t\t\t<respuesta>Incluye corrección de errores, actualizaciones de seguridad y ajustes menores en la funcionalidad.</respuesta>\n\t\t\t<text>¿Es obligatorio contratar mantenimiento?</text>\n\t\t\t<respuesta>No es obligatorio, pero es recomendable para garantizar el correcto funcionamiento a largo plazo.</respuesta>\n\t\t\t<text>¿Cuánto cuesta la póliza de mantenimiento?</text>\n\t\t\t<respuesta>El costo varía según el nivel de soporte requerido. Podemos proporcionarte una cotización personalizada.</respuesta>\n\t\t</pregunta>\n\t\t<!-- Cambios -->\n\t\t<pregunta tag=\"cambios\">\n\t\t\t<text>¿Puedo solicitar cambios después de aceptar la cotización?</text>\n\t\t\t<respuesta>Sí, pero pueden generar ajustes en costos y tiempos de entrega.</respuesta>\n\t\t\t<text>¿Cuánto cuestan los cambios adicionales?</text>\n\t\t\t<respuesta>Depende de la complejidad del cambio. Te proporcionaremos una cotización antes de realizarlo.</respuesta>\n\t\t\t<text>¿Los cambios afectan el tiempo de entrega?</text>\n\t\t\t<respuesta>Sí, modificaciones significativas pueden extender los plazos de entrega.</respuesta>\n\t\t</pregunta>\n\t\t<!-- Tecnologías -->\n\t\t<pregunta tag=\"tecnologias\">\n\t\t\t<text>¿Qué tecnologías usan para desarrollar apps?</text>\n\t\t\t<respuesta>Utilizamos Flutter, React Native, Node.js y Python, entre otras.</respuesta>\n\t\t\t<text>¿Pueden trabajar con una tecnología específica que yo elija?</text>\n\t\t\t<respuesta>Podemos evaluar la viabilidad de la tecnología que prefieras y adaptarnos si es posible.</respuesta>\n\t\t\t<text>¿Utilizan inteligencia artificial en los desarrollos?</text>\n\t\t\t<respuesta>Sí, podemos integrar inteligencia artificial en nuestras soluciones según las necesidades del proyecto.</respuesta>\n\t\t\t<text>¿Desarrollan apps nativas o híbridas?</text>\n\t\t\t<respuesta>Principalmente trabajamos con tecnologías híbridas como Flutter y React Native para optimizar costos y tiempos.</respuesta>\n\t\t</pregunta>\n\t\t<!-- Pago -->\n\t\t<pregunta tag=\"pago\">\n\t\t\t<text>¿Cuáles son las opciones de pago?</text>\n\t\t\t<respuesta>Aceptamos transferencias bancarias y otros métodos acordados previamente.</respuesta>\n\t\t\t<text>¿Puedo pagar en mensualidades?</text>\n\t\t\t<respuesta>Sí, podemos ofrecer un esquema de pagos en parcialidades según el acuerdo.</respuesta>\n\t\t\t<text>¿Cuál es el porcentaje de anticipo?</text>\n\t\t\t<respuesta>Requerimos un anticipo del 20% para iniciar el proyecto.</respuesta>\n\t\t\t<text>¿Hay reembolsos si decido no continuar?</text>\n\t\t\t<respuesta>Se cobrarán los recursos utilizados y horas trabajadas. No hay reembolso total.</respuesta>\n\t\t\t<text>¿El precio es negociable?</text>\n\t\t\t<respuesta>Sí, podemos negociar el precio basándonos en las necesidades del proyecto. La mejor forma de ajustar costos es a través de nuestro cotizador, donde puedes personalizar los requerimientos y ver cómo impactan en el precio final. Ten en cuenta que el cotizador es únicamente para servicios de desarrollo de apps móviles y apps web: \n        \n                \n                \n                \n\t\t\t\t<a href=\"http://precioapp.sstmexico.com/\">Cotizador de SST México</a>. \n        Si necesitas una negociación específica, llámanos para discutirlo. En el caso de requerir un servicio de página web, agentes IA, consultoría técnica en integración de APIs de Meta u otros, por favor comunícate a los teléfonos correspondientes para mayor información.      \n            \n            \n            \n\t\t\t</respuesta>\n\t\t</pregunta>\n\t\t<!-- Agente IA -->\n\t\t<pregunta tag=\"agente_ia\">\n\t\t\t<text>¿Pueden adaptar este servicio de agente de IA para mi negocio?</text>\n\t\t\t<respuesta>Sí, podemos desarrollar e implementar un agente de IA adaptado a las necesidades de tu negocio. Para discutir detalles específicos y personalizaciones, te recomendamos llamar a:  \n        - **Sergio Salazar:** \n                \n                \n                \n\t\t\t\t<a href=\"tel:5573333862\">5573333862</a>  \n        - **Jesús Salazar:** \n                \n                \n                \n\t\t\t\t<a href=\"tel:5648680084\">5648680084</a>\n\t\t\t</respuesta>\n\t\t</pregunta>\n\t\t<!-- Soporte -->\n\t\t<pregunta tag=\"soporte\">\n\t\t\t<text>¿Ofrecen soporte después de la entrega?</text>\n\t\t\t<respuesta>Sí, contamos con pólizas de soporte técnico anual o mensual.</respuesta>\n\t\t\t<text>¿Cuánto tiempo dura el soporte técnico?</text>\n\t\t\t<respuesta>Depende del plan contratado, ya sea mensual o anual.</respuesta>\n\t\t\t<text>¿El soporte cubre nuevas funcionalidades?</text>\n\t\t\t<respuesta>No, solo cubre mantenimiento y correcciones. Nuevas funcionalidades tienen un costo adicional.</respuesta>\n\t\t\t<text>¿Cómo contacto al soporte en caso de fallas?</text>\n\t\t\t<respuesta>Puedes contactarnos directamente:  \n        - Sergio Salazar (Administración y Marketing Digital): \n                \n                \n                \n\t\t\t\t<a href=\"tel:5573333862\">5573333862</a>  \n        - Jesús Salazar (Desarrollo): \n                \n                \n                \n\t\t\t\t<a href=\"tel:5648680084\">5648680084</a>  \n        - Correo electrónico: \n                \n                \n                \n\t\t\t\t<a href=\"mailto:contacto@sstmexico.com\">contacto@sstmexico.com</a>\n\t\t\t</respuesta>\n\t\t</pregunta>\n\t\t<!-- Ejemplos -->\n\t\t<pregunta tag=\"ejemplos\">\n\t\t\t<text>¿Tienen ejemplos de aplicaciones o páginas web que hayan desarrollado?</text>\n\t\t\t<respuesta>Claro, aquí tienes algunos ejemplos de nuestro trabajo:  \n        - **Apps en iOS:** \n                \n                \n                \n\t\t\t\t<a href=\"https://apps.apple.com/mx/developer/sergio-emmanuel-salazar-cruz/id1736181306\">SST México en App Store</a>  \n        - **Apps en Android:** \n                \n                \n                \n\t\t\t\t<a href=\"https://play.google.com/store/apps/developer?id=SST+México&hl=es_MX\">SST México en Google Play</a>  \n        - **Ejemplo de página web:** \n                \n                \n                \n\t\t\t\t<a href=\"https://salonlatinorenton.com/\">Salón Latino Renton</a>  \n        - **Ejemplo de web app:** \n                \n                \n                \n\t\t\t\t<a href=\"http://precioapp.sstmexico.com/\">Cotizador de SST México</a>  \n        Si deseas más información sobre nuestros proyectos, contáctanos.\n            \n            \n            \n\t\t\t</respuesta>\n\t\t</pregunta>\n\t\t<!-- Ubicación -->\n\t\t<pregunta tag=\"ubicacion\">\n\t\t\t<text>¿Dónde están ubicados?</text>\n\t\t\t<respuesta>Nuestra empresa está registrada en Google, puedes ver nuestra ubicación y más información en nuestro perfil:  \n        \n                \n                \n                \n\t\t\t\t<a href=\"https://g.co/kgs/oJ2wYdG\">Ver ubicación en Google</a>\n\t\t\t</respuesta>\n\t\t</pregunta>\n\t\t<!-- Cancelación -->\n\t\t<pregunta tag=\"cancelacion\">\n\t\t\t<text>¿Qué pasa si quiero cancelar el desarrollo?</text>\n\t\t\t<respuesta>Se cobrará por los recursos utilizados y horas trabajadas, y se entregará lo desarrollado hasta el momento.</respuesta>\n\t\t\t<text>¿Recibo algún reembolso si cancelo?</text>\n\t\t\t<respuesta>No hay reembolso total, solo parcial según el avance del proyecto.</respuesta>\n\t\t\t<text>¿Qué me entregan si cancelo el proyecto?</text>\n\t\t\t<respuesta>Te entregamos el código y archivos desarrollados hasta la fecha de cancelación.</respuesta>\n\t\t</pregunta>\n\t\t<!-- Consultoría Meta - Integración de APIs -->\n\t\t<pregunta tag=\"consultoria_meta\">\n\t\t\t<text>¿Ofrecen consultoría para integrar APIs de Meta o WhatsApp Business con mi CRM?</text>\n\t\t\t<respuesta>Sí, ofrecemos consultoría técnica para integrar las APIs de WhatsApp Business y otras APIs de Meta con tu CRM o sistemas internos. Nuestro equipo puede asesorarte sobre la viabilidad, arquitectura y mejores prácticas para conectar estas plataformas. Para una cotización personalizada, contacta a Sergio Salazar al 5573333862.</respuesta>\n\t\t\t<text>¿Pueden configurar un gestor de publicación automática con APIs de Meta?</text>\n\t\t\t<respuesta>Sí, podemos ayudarte a implementar gestores de publicación automática que se conecten a las APIs de Meta. Esto incluye automatización de mensajes, sincronización de datos y integración con tus sistemas. Te recomendamos hablar directamente con Sergio Salazar (5573333862) para evaluar tus necesidades técnicas.</respuesta>\n\t\t\t<text>¿Cuánto cuesta la consultoría para integración de APIs de Meta?</text>\n\t\t\t<respuesta>El precio de la consultoría técnica para integración de APIs de Meta/WhatsApp varía según el alcance del proyecto: cantidad de integraciones, complejidad del CRM, tipo de automatización requerida, etc. Para recibir una cotización personalizada acorde a tus necesidades específicas, contacta directamente a Sergio Salazar al 5573333862.</respuesta>\n\t\t\t<text>¿Qué tipo de sistemas pueden integrar con las APIs de Meta?</text>\n\t\t\t<respuesta>Podemos integrar APIs de Meta y WhatsApp Business con diversos sistemas como CRMs, sistemas de gestión de clientes, plataformas de e-commerce, herramientas de automatización y sistemas internos personalizados. Contacta a Sergio Salazar al 5573333862 para discutir tu caso específico.</respuesta>\n\t\t</pregunta>\n\t</preguntas>\n\t<respuesta_precios>\n\t\t<automatizacion>\n        Ofrecemos servicios de automatización con agentes inteligentes que se conectan con plataformas como WhatsApp, Telegram y sistemas internos.\n\n        El precio depende de:\n        • La complejidad del flujo de trabajo  \n        • La cantidad de integraciones necesarias  \n        • El tipo de plataforma que deseas automatizar\n\n        Para recibir una estimación detallada según tus necesidades, llena este formulario:  \n        \n\t\t\t<formularioautomatizacion>https://sstmexico.fillout.com/t/1yQ7u2gCXAus</formularioautomatizacion>\n\t\t</automatizacion>\n\t\t<app>\n        Para ofrecerte un precio justo y acorde a tus necesidades, consideramos varios factores como la complejidad del desarrollo, integraciones con otras plataformas y la relación calidad-precio.  \n        Por eso, te invitamos a visitar nuestro cotizador web, donde podrás obtener una estimación detallada según los requerimientos específicos de tu proyecto:  \n        \n\t\t\t<appcotizador>http://precioapp.sstmexico.com/</appcotizador>\n\t\t</app>\n\t\t<webpage>\n        Si estás interesado en el desarrollo de una página web, aquí tienes una guía de precios:\n\n        • Página básica: $5,750 MXN  \n        • Página con integraciones y funcionalidades específicas: $13,750 MXN  \n        • Página con integraciones avanzadas y recolección de información: entre $20,000 y $30,000+ MXN\n\n        Para recibir más detalles específicos o cotización personalizada, por favor completa el siguiente formulario:  \n        \n\t\t\t<webpageform>https://sstmexico.fillout.com/t/m7uT5H3gxpus</webpageform> \n\n        También puedes visitar nuestro sitio web para más información:  \n        \n\t\t\t<webpageejemplo>https://sstmexico.com/</webpageejemplo>\n\t\t</webpage>\n\t\t<meta>\n\t\tSi estás interesado en consultoría técnica para integración de APIs de Meta (WhatsApp Business, Facebook, Instagram) con tu CRM o sistemas de automatización, el precio varía según el alcance del servicio:\n\n\t\t• Consultoría técnica inicial y análisis de viabilidad: Precio personalizado\n\t\t• Integración de WhatsApp Business API con tu CRM: Precio personalizado  \n\t\t• Implementación de gestor de publicación automática: Precio personalizado\n\n\t\tPara recibir una cotización detallada acorde a tus objetivos específicos, contacta directamente a:\n        \n        \t\t• **Sergio Salazar** (Marketing Digital y Tecnología): \n                \n                \n                \n\t\t\t\t<a href=\"tel:5573333862\">5573333862</a>\n\n        O completa nuestro formulario de contacto general:  \n        \n\t\t\t<metaform>https://sstmexico.fillout.com/t/m7uT5H3gxpus</metaform>\n\t\t</meta>\n\t</respuesta_precios>\n\t<respuesta_fuera_alcance>\n\t\t<text>No tengo permitido responder esa pregunta o la información sobre eso no es una duda sobre nuestros servicios. Para más detalles, puedes llamarnos.  \n        - Sergio Salazar (Administración y Marketing Digital): 5573333862  \n        - Jesús Salazar (Desarrollo): 5648680084</text>\n\t</respuesta_fuera_alcance>\n\t<instrucciones_agente>\n    <instruccion>\n        Este chatbot debe responder únicamente a preguntas relacionadas con los servicios ofrecidos por SST México, los cuales incluyen: desarrollo de aplicaciones móviles y web, creación de sitios web empresariales y tiendas en línea, automatización de procesos, integración con APIs, soporte técnico, asesoría y consultoría tecnológica, consultoría técnica para integración de APIs de Meta y WhatsApp Business con CRMs y gestores de publicación automática, y desarrollo de agentes de IA. No debe brindar información sobre temas fuera de este ámbito, como matemáticas, problemas técnicos ajenos, community management, gestión de campañas publicitarias en redes sociales, u otras áreas no relacionadas con los servicios mencionados. En caso de recibir preguntas fuera de este alcance, responde de forma cordial indicando que la información solicitada no corresponde a nuestros servicios, y proporciona los datos de contacto (teléfono y correo) para mayor orientación.\n    </instruccion>\n\n    <instruccion>\n        Usa la herramienta de calendar para agendar citas cuando el usuario lo solicite. Antes de crear el evento, solicita la siguiente información:\n        - Nombre completo del usuario.\n        - Nombre del evento o motivo de la cita.\n        - Descripción breve del evento (objetivo o temas a tratar).\n        - Fecha y hora preferida.\n    </instruccion>\n\n    <instruccion>\n        Si el usuario consulta sobre servicios de desarrollo web, automatización, agentes de inteligencia artificial o consultoría técnica para integración de APIs de Meta/WhatsApp Business, proporciona rangos de precios aproximados según el tipo de proyecto:\n        - Sitios web básicos: aproximadamente $5,750 MXN.\n        - Sitios con integraciones o funcionalidades específicas: aproximadamente $13,750 MXN.\n        - Sitios avanzados con funciones personalizadas y recolección de datos: entre $20,000 y $30,000+ MXN.\n        - Consultoría técnica para integración de APIs de Meta/WhatsApp con CRMs: Precio variable según alcance. Contactar a Sergio Salazar (5573333862) para cotización personalizada.\n        Para solicitudes de desarrollo de aplicaciones móviles o web apps, redirígelo amablemente al cotizador correspondiente.\n    </instruccion>\n</instrucciones_agente>\n\n</agentInstructions>"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        -1264,
+        112
+      ],
+      "id": "959d7599-c645-46a1-b934-635555505ad0",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $('WhatsApp Trigger').item.json.contacts[0].wa_id }}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        -1120,
+        320
+      ],
+      "id": "798a1b54-e8bc-418d-8629-036c4be0faab",
+      "name": "Window Buffer Memory"
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "={{ $('WhatsApp Trigger').item.json.metadata.phone_number_id }}",
+        "recipientPhoneNumber": "=+52{{ $('WhatsApp Trigger').item.json.contacts[0].wa_id.slice(-10) }}",
+        "textBody": "={{ $json.output }}",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1,
+      "position": [
+        -880,
+        112
+      ],
+      "id": "eb6bbab5-6579-4a23-b19d-bd301d66fc10",
+      "name": "WhatsApp Business Cloud",
+      "webhookId": "18dcc870-da80-47ef-af5a-f13c85ddfdfb",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "BPSOIGTqAIdIoVMl",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "updates": [
+          "messages"
+        ],
+        "options": {
+          "messageStatusUpdates": [
+            "all"
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.whatsAppTrigger",
+      "typeVersion": 1,
+      "position": [
+        -3248,
+        224
+      ],
+      "id": "ef322506-89b2-499d-b01d-4eb390db3ddd",
+      "name": "WhatsApp Trigger",
+      "webhookId": "956576c7-7130-4458-97c5-c128d923266c",
+      "notesInFlow": false,
+      "credentials": {
+        "whatsAppTriggerApi": {
+          "id": "EnYCB0TreWgsTuA7",
+          "name": "WhatsApp OAuth account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "8e16729e-1b67-4751-8b88-c20e195c4ba8",
+              "leftValue": "={{ $json.condition }}",
+              "rightValue": "=",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -2576,
+        240
+      ],
+      "id": "4f815a0a-378c-48a7-b4f9-694ac30dfb26",
+      "name": "If"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -2368,
+        368
+      ],
+      "id": "b7c59787-6e6a-4a61-9345-dc8e02d3bd07",
+      "name": "No Operation, do nothing"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $('WhatsApp Trigger').item.json.messages[0].type }}",
+                    "rightValue": "text",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "12197570-4c9e-4c29-b861-bfc174543afa"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "text"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "9c758c00-33e3-45dd-b975-2cdfa1002f62",
+                    "leftValue": "={{ $('WhatsApp Trigger').item.json.messages[0].type }}",
+                    "rightValue": "button",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "a9b1eaab-7076-4ef3-bea6-27c247520d53",
+                    "leftValue": "={{ $('WhatsApp Trigger').item.json.messages[0].type }}",
+                    "rightValue": "image",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "image"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "f62f7fab-4a0d-47ae-a0a7-f2a98515e6c6",
+                    "leftValue": "={{ $('WhatsApp Trigger').item.json.messages[0].type }}",
+                    "rightValue": "audio",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "audio"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "2a8bad2a-ca7e-4f5d-8169-5b7dbcace4bc",
+                    "leftValue": "={{ $('WhatsApp Trigger').item.json.messages[0].type }}",
+                    "rightValue": "video",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "video"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        -2368,
+        64
+      ],
+      "id": "534e3552-75c4-46e8-a077-c9ed952830b1",
+      "name": "Switch"
+    },
+    {
+      "parameters": {
+        "resource": "media",
+        "operation": "mediaUrlGet",
+        "mediaGetId": "={{ $('WhatsApp Trigger').item.json.messages[0].audio.id }}"
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1,
+      "position": [
+        -2144,
+        192
+      ],
+      "id": "abfef629-bc93-4b15-a5f7-8656674283bd",
+      "name": "WhatsApp Business Cloud1",
+      "webhookId": "ccf16b0e-4029-4744-a006-8bebe3db64d3",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "BPSOIGTqAIdIoVMl",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.url }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "whatsAppApi",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1920,
+        192
+      ],
+      "id": "3276c64d-7e1c-4d56-8073-ef862ff32060",
+      "name": "HTTP Download",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "BPSOIGTqAIdIoVMl",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.deepgram.com/v1/listen",
+        "sendQuery": true,
+        "specifyQuery": "json",
+        "jsonQuery": "{\n  \"model\": \"nova-2-general\",\n  \"language\": \"es\",\n  \"punctuate\": true,\n  \"smart_format\": true,\n  \"diarize\": true,\n  \"detect_language\": false,\n  \"numerals\": true\n}\n",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Token e02354d3605950beff932cec47417832a8b460f8"
+            },
+            {
+              "name": "Content-Type",
+              "value": "audio/opus"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "binaryData",
+        "inputDataFieldName": "data",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1696,
+        192
+      ],
+      "id": "034b3e2f-eb3e-4144-b995-42832b63e7d2",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "604810a7-59ad-4c4a-a9d7-aa27d56c9f4d",
+              "name": "type",
+              "value": "={{ $('WhatsApp Trigger').item.json.messages[0].type }}",
+              "type": "string"
+            },
+            {
+              "id": "a414d88b-5a0e-4071-a7c7-7a17242997fc",
+              "name": "mensaje",
+              "value": "={{ $if($('WhatsApp Trigger').item.json.messages[0].type!=\"text\", $('HTTP Request').item.json.results.channels[0].alternatives[0].transcript, $('WhatsApp Trigger').item.json.messages[0].text.body) }}\n",
+              "type": "string"
+            },
+            {
+              "id": "02faa4ba-b80d-4ba1-8ebf-784881f619c3",
+              "name": "nombre_remitente",
+              "value": "={{ $('WhatsApp Trigger').item.json.contacts[0].profile.name }}\n\n",
+              "type": "string"
+            },
+            {
+              "id": "3e935cf6-1811-433b-93ef-511cc4f2a468",
+              "name": "numero_remitente",
+              "value": "={{ $('WhatsApp Trigger').item.json.contacts[0].wa_id }}\n",
+              "type": "string"
+            },
+            {
+              "id": "5144c67d-eb6d-4b9b-933b-7e178e223d26",
+              "name": "numero_agent",
+              "value": "={{ $('WhatsApp Trigger').item.json.metadata.display_phone_number }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -1488,
+        112
+      ],
+      "id": "adcfc38d-f477-4ef3-a411-05ae23489864",
+      "name": "condicional"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "8900090b-3071-404f-8725-be70b3e6aebf",
+              "leftValue": "={{ $json.isEmpty() }}",
+              "rightValue": "=0",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -224,
+        112
+      ],
+      "id": "2acc6a37-b06b-4bc5-869a-75f5d392912b",
+      "name": "If1"
+    },
+    {
+      "parameters": {
+        "tableId": "mensajes",
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "id",
+              "fieldValue": "={{ [...Array(16)].map(() => 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'.charAt(Math.floor(Math.random() * 62))).join('') }}\n"
+            },
+            {
+              "fieldId": "conversacion_id",
+              "fieldValue": "={{ $json.id }}"
+            },
+            {
+              "fieldId": "remitente",
+              "fieldValue": "={{ $('Edit Fields').item.json.name_user.replace(/\\r?\\n|\\r/g, '') }}"
+            },
+            {
+              "fieldId": "contenido",
+              "fieldValue": "={{ $('Edit Fields').item.json.user_message_audio }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        224,
+        0
+      ],
+      "id": "b10c3d1c-e464-4b13-8e8a-8b8a982d428d",
+      "name": "Supabase4",
+      "credentials": {
+        "supabaseApi": {
+          "id": "5N5HgkdmaNcuRz0s",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "tableId": "mensajes",
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "id",
+              "fieldValue": "={{ [...Array(16)].map(() => 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'.charAt(Math.floor(Math.random() * 62))).join('') }}\n"
+            },
+            {
+              "fieldId": "conversacion_id",
+              "fieldValue": "={{ $('Edit Fields').item.json.id_conversacion }}"
+            },
+            {
+              "fieldId": "remitente",
+              "fieldValue": "={{ $('Edit Fields').item.json.agente_ia_id }}"
+            },
+            {
+              "fieldId": "contenido",
+              "fieldValue": "={{ $('If1').item.json.respuesta }}{{ $('AI Agent').item.json.output }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        448,
+        0
+      ],
+      "id": "f6389a69-f413-4cd2-be16-aabc0a825ea4",
+      "name": "Supabase5",
+      "credentials": {
+        "supabaseApi": {
+          "id": "5N5HgkdmaNcuRz0s",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "acffd096-6a3c-4359-95d4-bb87090b4d5c",
+              "name": "id_conversacion",
+              "value": "={{ $json.contacts[0].input }}_{{ $('condicional').item.json.numero_agent }}",
+              "type": "string"
+            },
+            {
+              "id": "1581ac48-de1a-492b-b243-728655228d51",
+              "name": "numero_waba_id",
+              "value": "={{ $('condicional').item.json.numero_agent }}",
+              "type": "string"
+            },
+            {
+              "id": "8218588d-48e9-4155-8f6b-08976c71d975",
+              "name": "agente_ia_id",
+              "value": "={{ $workflow.name }}",
+              "type": "string"
+            },
+            {
+              "id": "4eba6cb4-e7f8-4c97-8890-33af9735882c",
+              "name": "name_user",
+              "value": "={{ $('condicional').item.json.nombre_remitente }}",
+              "type": "string"
+            },
+            {
+              "id": "b597b4c1-8f55-4f71-83ed-553de20db4af",
+              "name": "user_message_audio",
+              "value": "={{ $('condicional').item.json.mensaje }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -656,
+        112
+      ],
+      "id": "15bf84d2-dd9a-4ccf-a551-863615933402",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "tableId": "conversaciones",
+        "returnAll": true,
+        "matchType": "allFilters",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "id",
+              "condition": "eq",
+              "keyValue": "={{ $json.id_conversacion }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        -448,
+        112
+      ],
+      "id": "8acbaad8-7caa-47d7-b4b1-e7f56c046158",
+      "name": "GET id_Conversation",
+      "alwaysOutputData": true,
+      "credentials": {
+        "supabaseApi": {
+          "id": "5N5HgkdmaNcuRz0s",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "tableId": "conversaciones",
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "id",
+              "fieldValue": "={{ $('Edit Fields').item.json.id_conversacion }}"
+            },
+            {
+              "fieldId": "numero_waba_id",
+              "fieldValue": "={{ $('Edit Fields').item.json.numero_waba_id }}"
+            },
+            {
+              "fieldId": "agente_ia_id",
+              "fieldValue": "={{ $('Edit Fields').item.json.agente_ia_id }}"
+            },
+            {
+              "fieldId": "cliente",
+              "fieldValue": "={{ $('Edit Fields').item.json.name_user.replace(/\\r?\\n|\\r/g, '') }}"
+            },
+            {
+              "fieldId": "agente",
+              "fieldValue": "={{ $workflow.name }}"
+            },
+            {
+              "fieldId": "isActive",
+              "fieldValue": "={{ true }}"
+            },
+            {
+              "fieldId": "Id_waba_agent",
+              "fieldValue": "={{ $('WhatsApp Trigger').item.json.metadata.phone_number_id }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "e9cbd901-a0f1-405a-bfc1-ad9d8dbba4a2",
+      "name": "Create conversation",
+      "credentials": {
+        "supabaseApi": {
+          "id": "5N5HgkdmaNcuRz0s",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "tableId": "conversaciones",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "id",
+              "keyValue": "=52{{ $json.contacts[0].wa_id.substring(3) }}_{{ $json.metadata.display_phone_number }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        -3024,
+        240
+      ],
+      "id": "2a357754-bdbf-4529-9e4e-71a03d801dab",
+      "name": "Supabase",
+      "alwaysOutputData": true,
+      "credentials": {
+        "supabaseApi": {
+          "id": "5N5HgkdmaNcuRz0s",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const items = $input.all();\nconst condition =\n  items.length === 1 || (items.length > 1 && items[0]?.json?.isActive === true);\n\nreturn [{ json: { condition } }];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -2800,
+        240
+      ],
+      "id": "9285057f-e3c4-4480-b93c-b93d25790c33",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "tableId": "mensajes",
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "id",
+              "fieldValue": "={{ [...Array(16)].map(() => 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'.charAt(Math.floor(Math.random() * 62))).join('') }}\n"
+            },
+            {
+              "fieldId": "conversacion_id",
+              "fieldValue": "={{ $json.id }}"
+            },
+            {
+              "fieldId": "remitente",
+              "fieldValue": "={{ $('Edit Fields').item.json.name_user.replace(/\\r?\\n|\\r/g, '') }}"
+            },
+            {
+              "fieldId": "contenido",
+              "fieldValue": "={{ $('Edit Fields').item.json.user_message_audio }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        0,
+        208
+      ],
+      "id": "7ac7a08e-a9e3-4a74-bd45-70769021461b",
+      "name": "Supabase8",
+      "credentials": {
+        "supabaseApi": {
+          "id": "5N5HgkdmaNcuRz0s",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "tableId": "mensajes",
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "id",
+              "fieldValue": "={{ [...Array(16)].map(() => 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'.charAt(Math.floor(Math.random() * 62))).join('') }}\n"
+            },
+            {
+              "fieldId": "conversacion_id",
+              "fieldValue": "={{ $('Edit Fields').item.json.id_conversacion }}"
+            },
+            {
+              "fieldId": "remitente",
+              "fieldValue": "={{ $('Edit Fields').item.json.agente_ia_id }}"
+            },
+            {
+              "fieldId": "contenido",
+              "fieldValue": "={{ $('If1').item.json.respuesta }}{{ $('AI Agent').item.json.output }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        224,
+        208
+      ],
+      "id": "66be5d12-f40d-4f6a-bda9-76f2461584f5",
+      "name": "Supabase9",
+      "credentials": {
+        "supabaseApi": {
+          "id": "5N5HgkdmaNcuRz0s",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "calendar": {
+          "__rl": true,
+          "value": "=sstmex.adm@gmail.com",
+          "mode": "id",
+          "__regex": "(^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*)"
+        },
+        "start": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Start', ``, 'string') }}",
+        "end": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('End', ``, 'string') }}",
+        "useDefaultReminders": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Use_Default_Reminders', ``, 'boolean') }}",
+        "additionalFields": {
+          "description": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Description', ``, 'string') }}",
+          "summary": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Summary', ``, 'string') }}"
+        }
+      },
+      "type": "n8n-nodes-base.googleCalendarTool",
+      "typeVersion": 1.3,
+      "position": [
+        -896,
+        368
+      ],
+      "id": "b3ee982f-67eb-41dc-8373-d036e6f702dd",
+      "name": "Google Calendar",
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "OkjEtSz0enlLJr0J",
+          "name": "Google Calendar account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "openrouter/free",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [
+        -1408,
+        320
+      ],
+      "id": "e89af87a-ee3e-46c0-b46b-387c1847118d",
+      "name": "OpenRouter Chat Model",
+      "credentials": {
+        "openRouterApi": {
+          "id": "hdrYzQzMvwO4LvN7",
+          "name": "OpenRouter account"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "WhatsApp Business Cloud",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Window Buffer Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WhatsApp Trigger": {
+      "main": [
+        [
+          {
+            "node": "Supabase",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "condicional",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "condicional",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [],
+        [
+          {
+            "node": "WhatsApp Business Cloud1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WhatsApp Business Cloud1": {
+      "main": [
+        [
+          {
+            "node": "HTTP Download",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Download": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "condicional",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "condicional": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WhatsApp Business Cloud": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If1": {
+      "main": [
+        [
+          {
+            "node": "Create conversation",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Supabase8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase4": {
+      "main": [
+        [
+          {
+            "node": "Supabase5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "GET id_Conversation",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GET id_Conversation": {
+      "main": [
+        [
+          {
+            "node": "If1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create conversation": {
+      "main": [
+        [
+          {
+            "node": "Supabase4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase8": {
+      "main": [
+        [
+          {
+            "node": "Supabase9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Calendar": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": true
+  },
+  "staticData": null,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "pinData": {},
+  "versionId": "1b14ac9c-5ca8-4e72-afb7-562c15822bf8",
+  "activeVersionId": "1b14ac9c-5ca8-4e72-afb7-562c15822bf8",
+  "versionCounter": 49,
+  "triggerCount": 1,
+  "shared": [
+    {
+      "updatedAt": "2026-03-14T04:41:51.410Z",
+      "createdAt": "2026-03-14T04:41:51.410Z",
+      "role": "workflow:owner",
+      "workflowId": "llUinMjQxIejMY8S",
+      "projectId": "2MF5TYfxIqsXjc1Y",
+      "project": {
+        "updatedAt": "2026-03-14T04:34:43.090Z",
+        "createdAt": "2026-03-14T04:30:52.525Z",
+        "id": "2MF5TYfxIqsXjc1Y",
+        "name": "Jesús Emmanuel Salazar Cruz <salazar81c@gmail.com>",
+        "type": "personal",
+        "icon": null,
+        "description": null,
+        "creatorId": "7941b074-95dc-4dd0-91c8-dbe272de34d4"
+      }
+    }
+  ],
+  "tags": [],
+  "activeVersion": {
+    "updatedAt": "2026-03-26T20:22:20.079Z",
+    "createdAt": "2026-03-26T20:22:08.081Z",
+    "versionId": "1b14ac9c-5ca8-4e72-afb7-562c15822bf8",
+    "workflowId": "llUinMjQxIejMY8S",
+    "nodes": [
+      {
+        "parameters": {
+          "promptType": "define",
+          "text": "={{ $json.mensaje }}",
+          "options": {
+            "systemMessage": "<agentInstructions>\n\t<rol>\n\t\t<nombre>SST Agente de Soporte</nombre>\n\t\t<description>Chatbot de soporte para guiar al usuario durante el proceso de cotización de aplicaciones móviles y web apps en SST México ó cualquier otro servicio de SST México.</description>\n\t</rol>\n\t<empresa>\n\t\t<nombre>SST México</nombre>\n\t\t<descripcion>SST México es una empresa especializada en el desarrollo de aplicaciones móviles, aplicaciones web y sitios web. Utilizamos tecnologías modernas como Flutter, React Native, Node.js y Python para crear soluciones eficientes y escalables.</descripcion>\n\t</empresa>\n\t<informacion_equipo>\n\t\t<miembros>\n\t\t\t<miembro>\n\t\t\t\t<nombre>Jesús Salazar</nombre>\n\t\t\t\t<rol>Desarrollador</rol>\n\t\t\t\t<descripcion>Jesús es desarrollador en SST México. Se encarga de buscar e implementar nuevas tecnologías, apoyar en la administración de la empresa.</descripcion>\n\t\t\t</miembro>\n\t\t\t<miembro>\n\t\t\t\t<nombre>Sergio Salazar</nombre>\n\t\t\t\t<rol>Administración y Marketing Digital </rol>\n\t\t\t\t<descripcion>Sergio es responsable de la atención a clientes, gestión de prospectos, implementación de ideas, publicaciones en redes sociales, consultoría en Meta y administración general de SST México.</descripcion>\n\t\t\t</miembro>\n\t\t\t<miembro>\n\t\t\t\t<nombre>Fernando Chavez </nombre>\n\t\t\t\t<rol>Director de tecnología </rol>\n\t\t\t\t<descripcion>Fernando es responsable de la validacion en desarrollo y uso de tecnologias, así como en apoyo de a administración de SST México.</descripcion>\n\t\t\t</miembro>\n\t\t</miembros>\n\t</informacion_equipo>\n\t<servicios>\n\t\t<servicio>Desarrollo de Apps Móviles (Android y iOS)</servicio>\n\t\t<servicio>Desarrollo de Aplicaciones Web</servicio>\n\t\t<servicio>Creación de Sitios Web Empresariales y Tiendas en Línea</servicio>\n\t\t<servicio>Integración con APIs y Automatización de Procesos</servicio>\n\t\t<servicio>Mantenimiento y Soporte Técnico</servicio>\n\t\t<servicio>Asesoría y Consultoría Tecnológica</servicio>\n\t\t<servicio>Desarrollo e implementación de Web Service</servicio>\n\t\t<servicio>Consultoría en Meta (Integración de APIs de WhatsApp Business y Meta con CRMs, gestores de publicación automática)</servicio>\n\t</servicios>\n\t<objetivo>\n\t\t<primario>Asistir al usuario durante el proceso de cotización, respondiendo preguntas sobre opciones de funcionalidades, costos estimados, tiempos de desarrollo y detalles relacionados con la cotización de aplicaciones móviles, web apps y consultoría técnica de integración con APIs de Meta.</primario>\n\t\t<secundario>Responder únicamente lo que se pregunta, sin proporcionar información adicional ni realizar preguntas innecesarias.</secundario>\n\t</objetivo>\n\t<preguntas>\n\t\t<!-- Tiempo de Desarrollo -->\n\t\t<pregunta tag=\"tiempo_desarrollo\">\n\t\t\t<text>¿Cuánto tiempo tardará el desarrollo de mi app/web?</text>\n\t\t\t<respuesta>El tiempo de desarrollo depende de las funcionalidades. En promedio, una app puede tardar entre 4 y 6 meses, mientras que una página web puede completarse en 2 semanas a 1 mes.</respuesta>\n\t\t\t<text>¿Pueden entregarlo en menos tiempo?</text>\n\t\t\t<respuesta>Podemos agilizar el desarrollo con un enfoque priorizado, pero podría implicar costos adicionales.</respuesta>\n\t\t\t<text>¿Cuánto tarda una página web en comparación con una app?</text>\n\t\t\t<respuesta>Las páginas web suelen completarse en 2 semanas a 1 mes, mientras que las apps requieren entre 4 y 6 meses, dependiendo de la complejidad.</respuesta>\n\t\t\t<text>¿Influye el tipo de funcionalidad en el tiempo de desarrollo?</text>\n\t\t\t<respuesta>Sí, funcionalidades avanzadas como inteligencia artificial, pasarelas de pago o integraciones con APIs pueden aumentar el tiempo de desarrollo.</respuesta>\n\t\t</pregunta>\n\t\t<!-- Mantenimiento -->\n\t\t<pregunta tag=\"mantenimiento\">\n\t\t\t<text>¿El servicio incluye mantenimiento después de la entrega?</text>\n\t\t\t<respuesta>Ofrecemos planes de mantenimiento opcionales para actualizaciones y soporte técnico.</respuesta>\n\t\t\t<text>¿Qué cubre el mantenimiento?</text>\n\t\t\t<respuesta>Incluye corrección de errores, actualizaciones de seguridad y ajustes menores en la funcionalidad.</respuesta>\n\t\t\t<text>¿Es obligatorio contratar mantenimiento?</text>\n\t\t\t<respuesta>No es obligatorio, pero es recomendable para garantizar el correcto funcionamiento a largo plazo.</respuesta>\n\t\t\t<text>¿Cuánto cuesta la póliza de mantenimiento?</text>\n\t\t\t<respuesta>El costo varía según el nivel de soporte requerido. Podemos proporcionarte una cotización personalizada.</respuesta>\n\t\t</pregunta>\n\t\t<!-- Cambios -->\n\t\t<pregunta tag=\"cambios\">\n\t\t\t<text>¿Puedo solicitar cambios después de aceptar la cotización?</text>\n\t\t\t<respuesta>Sí, pero pueden generar ajustes en costos y tiempos de entrega.</respuesta>\n\t\t\t<text>¿Cuánto cuestan los cambios adicionales?</text>\n\t\t\t<respuesta>Depende de la complejidad del cambio. Te proporcionaremos una cotización antes de realizarlo.</respuesta>\n\t\t\t<text>¿Los cambios afectan el tiempo de entrega?</text>\n\t\t\t<respuesta>Sí, modificaciones significativas pueden extender los plazos de entrega.</respuesta>\n\t\t</pregunta>\n\t\t<!-- Tecnologías -->\n\t\t<pregunta tag=\"tecnologias\">\n\t\t\t<text>¿Qué tecnologías usan para desarrollar apps?</text>\n\t\t\t<respuesta>Utilizamos Flutter, React Native, Node.js y Python, entre otras.</respuesta>\n\t\t\t<text>¿Pueden trabajar con una tecnología específica que yo elija?</text>\n\t\t\t<respuesta>Podemos evaluar la viabilidad de la tecnología que prefieras y adaptarnos si es posible.</respuesta>\n\t\t\t<text>¿Utilizan inteligencia artificial en los desarrollos?</text>\n\t\t\t<respuesta>Sí, podemos integrar inteligencia artificial en nuestras soluciones según las necesidades del proyecto.</respuesta>\n\t\t\t<text>¿Desarrollan apps nativas o híbridas?</text>\n\t\t\t<respuesta>Principalmente trabajamos con tecnologías híbridas como Flutter y React Native para optimizar costos y tiempos.</respuesta>\n\t\t</pregunta>\n\t\t<!-- Pago -->\n\t\t<pregunta tag=\"pago\">\n\t\t\t<text>¿Cuáles son las opciones de pago?</text>\n\t\t\t<respuesta>Aceptamos transferencias bancarias y otros métodos acordados previamente.</respuesta>\n\t\t\t<text>¿Puedo pagar en mensualidades?</text>\n\t\t\t<respuesta>Sí, podemos ofrecer un esquema de pagos en parcialidades según el acuerdo.</respuesta>\n\t\t\t<text>¿Cuál es el porcentaje de anticipo?</text>\n\t\t\t<respuesta>Requerimos un anticipo del 20% para iniciar el proyecto.</respuesta>\n\t\t\t<text>¿Hay reembolsos si decido no continuar?</text>\n\t\t\t<respuesta>Se cobrarán los recursos utilizados y horas trabajadas. No hay reembolso total.</respuesta>\n\t\t\t<text>¿El precio es negociable?</text>\n\t\t\t<respuesta>Sí, podemos negociar el precio basándonos en las necesidades del proyecto. La mejor forma de ajustar costos es a través de nuestro cotizador, donde puedes personalizar los requerimientos y ver cómo impactan en el precio final. Ten en cuenta que el cotizador es únicamente para servicios de desarrollo de apps móviles y apps web: \n        \n                \n                \n                \n\t\t\t\t<a href=\"http://precioapp.sstmexico.com/\">Cotizador de SST México</a>. \n        Si necesitas una negociación específica, llámanos para discutirlo. En el caso de requerir un servicio de página web, agentes IA, consultoría técnica en integración de APIs de Meta u otros, por favor comunícate a los teléfonos correspondientes para mayor información.      \n            \n            \n            \n\t\t\t</respuesta>\n\t\t</pregunta>\n\t\t<!-- Agente IA -->\n\t\t<pregunta tag=\"agente_ia\">\n\t\t\t<text>¿Pueden adaptar este servicio de agente de IA para mi negocio?</text>\n\t\t\t<respuesta>Sí, podemos desarrollar e implementar un agente de IA adaptado a las necesidades de tu negocio. Para discutir detalles específicos y personalizaciones, te recomendamos llamar a:  \n        - **Sergio Salazar:** \n                \n                \n                \n\t\t\t\t<a href=\"tel:5573333862\">5573333862</a>  \n        - **Jesús Salazar:** \n                \n                \n                \n\t\t\t\t<a href=\"tel:5648680084\">5648680084</a>\n\t\t\t</respuesta>\n\t\t</pregunta>\n\t\t<!-- Soporte -->\n\t\t<pregunta tag=\"soporte\">\n\t\t\t<text>¿Ofrecen soporte después de la entrega?</text>\n\t\t\t<respuesta>Sí, contamos con pólizas de soporte técnico anual o mensual.</respuesta>\n\t\t\t<text>¿Cuánto tiempo dura el soporte técnico?</text>\n\t\t\t<respuesta>Depende del plan contratado, ya sea mensual o anual.</respuesta>\n\t\t\t<text>¿El soporte cubre nuevas funcionalidades?</text>\n\t\t\t<respuesta>No, solo cubre mantenimiento y correcciones. Nuevas funcionalidades tienen un costo adicional.</respuesta>\n\t\t\t<text>¿Cómo contacto al soporte en caso de fallas?</text>\n\t\t\t<respuesta>Puedes contactarnos directamente:  \n        - Sergio Salazar (Administración y Marketing Digital): \n                \n                \n                \n\t\t\t\t<a href=\"tel:5573333862\">5573333862</a>  \n        - Jesús Salazar (Desarrollo): \n                \n                \n                \n\t\t\t\t<a href=\"tel:5648680084\">5648680084</a>  \n        - Correo electrónico: \n                \n                \n                \n\t\t\t\t<a href=\"mailto:contacto@sstmexico.com\">contacto@sstmexico.com</a>\n\t\t\t</respuesta>\n\t\t</pregunta>\n\t\t<!-- Ejemplos -->\n\t\t<pregunta tag=\"ejemplos\">\n\t\t\t<text>¿Tienen ejemplos de aplicaciones o páginas web que hayan desarrollado?</text>\n\t\t\t<respuesta>Claro, aquí tienes algunos ejemplos de nuestro trabajo:  \n        - **Apps en iOS:** \n                \n                \n                \n\t\t\t\t<a href=\"https://apps.apple.com/mx/developer/sergio-emmanuel-salazar-cruz/id1736181306\">SST México en App Store</a>  \n        - **Apps en Android:** \n                \n                \n                \n\t\t\t\t<a href=\"https://play.google.com/store/apps/developer?id=SST+México&hl=es_MX\">SST México en Google Play</a>  \n        - **Ejemplo de página web:** \n                \n                \n                \n\t\t\t\t<a href=\"https://salonlatinorenton.com/\">Salón Latino Renton</a>  \n        - **Ejemplo de web app:** \n                \n                \n                \n\t\t\t\t<a href=\"http://precioapp.sstmexico.com/\">Cotizador de SST México</a>  \n        Si deseas más información sobre nuestros proyectos, contáctanos.\n            \n            \n            \n\t\t\t</respuesta>\n\t\t</pregunta>\n\t\t<!-- Ubicación -->\n\t\t<pregunta tag=\"ubicacion\">\n\t\t\t<text>¿Dónde están ubicados?</text>\n\t\t\t<respuesta>Nuestra empresa está registrada en Google, puedes ver nuestra ubicación y más información en nuestro perfil:  \n        \n                \n                \n                \n\t\t\t\t<a href=\"https://g.co/kgs/oJ2wYdG\">Ver ubicación en Google</a>\n\t\t\t</respuesta>\n\t\t</pregunta>\n\t\t<!-- Cancelación -->\n\t\t<pregunta tag=\"cancelacion\">\n\t\t\t<text>¿Qué pasa si quiero cancelar el desarrollo?</text>\n\t\t\t<respuesta>Se cobrará por los recursos utilizados y horas trabajadas, y se entregará lo desarrollado hasta el momento.</respuesta>\n\t\t\t<text>¿Recibo algún reembolso si cancelo?</text>\n\t\t\t<respuesta>No hay reembolso total, solo parcial según el avance del proyecto.</respuesta>\n\t\t\t<text>¿Qué me entregan si cancelo el proyecto?</text>\n\t\t\t<respuesta>Te entregamos el código y archivos desarrollados hasta la fecha de cancelación.</respuesta>\n\t\t</pregunta>\n\t\t<!-- Consultoría Meta - Integración de APIs -->\n\t\t<pregunta tag=\"consultoria_meta\">\n\t\t\t<text>¿Ofrecen consultoría para integrar APIs de Meta o WhatsApp Business con mi CRM?</text>\n\t\t\t<respuesta>Sí, ofrecemos consultoría técnica para integrar las APIs de WhatsApp Business y otras APIs de Meta con tu CRM o sistemas internos. Nuestro equipo puede asesorarte sobre la viabilidad, arquitectura y mejores prácticas para conectar estas plataformas. Para una cotización personalizada, contacta a Sergio Salazar al 5573333862.</respuesta>\n\t\t\t<text>¿Pueden configurar un gestor de publicación automática con APIs de Meta?</text>\n\t\t\t<respuesta>Sí, podemos ayudarte a implementar gestores de publicación automática que se conecten a las APIs de Meta. Esto incluye automatización de mensajes, sincronización de datos y integración con tus sistemas. Te recomendamos hablar directamente con Sergio Salazar (5573333862) para evaluar tus necesidades técnicas.</respuesta>\n\t\t\t<text>¿Cuánto cuesta la consultoría para integración de APIs de Meta?</text>\n\t\t\t<respuesta>El precio de la consultoría técnica para integración de APIs de Meta/WhatsApp varía según el alcance del proyecto: cantidad de integraciones, complejidad del CRM, tipo de automatización requerida, etc. Para recibir una cotización personalizada acorde a tus necesidades específicas, contacta directamente a Sergio Salazar al 5573333862.</respuesta>\n\t\t\t<text>¿Qué tipo de sistemas pueden integrar con las APIs de Meta?</text>\n\t\t\t<respuesta>Podemos integrar APIs de Meta y WhatsApp Business con diversos sistemas como CRMs, sistemas de gestión de clientes, plataformas de e-commerce, herramientas de automatización y sistemas internos personalizados. Contacta a Sergio Salazar al 5573333862 para discutir tu caso específico.</respuesta>\n\t\t</pregunta>\n\t</preguntas>\n\t<respuesta_precios>\n\t\t<automatizacion>\n        Ofrecemos servicios de automatización con agentes inteligentes que se conectan con plataformas como WhatsApp, Telegram y sistemas internos.\n\n        El precio depende de:\n        • La complejidad del flujo de trabajo  \n        • La cantidad de integraciones necesarias  \n        • El tipo de plataforma que deseas automatizar\n\n        Para recibir una estimación detallada según tus necesidades, llena este formulario:  \n        \n\t\t\t<formularioautomatizacion>https://sstmexico.fillout.com/t/1yQ7u2gCXAus</formularioautomatizacion>\n\t\t</automatizacion>\n\t\t<app>\n        Para ofrecerte un precio justo y acorde a tus necesidades, consideramos varios factores como la complejidad del desarrollo, integraciones con otras plataformas y la relación calidad-precio.  \n        Por eso, te invitamos a visitar nuestro cotizador web, donde podrás obtener una estimación detallada según los requerimientos específicos de tu proyecto:  \n        \n\t\t\t<appcotizador>http://precioapp.sstmexico.com/</appcotizador>\n\t\t</app>\n\t\t<webpage>\n        Si estás interesado en el desarrollo de una página web, aquí tienes una guía de precios:\n\n        • Página básica: $5,750 MXN  \n        • Página con integraciones y funcionalidades específicas: $13,750 MXN  \n        • Página con integraciones avanzadas y recolección de información: entre $20,000 y $30,000+ MXN\n\n        Para recibir más detalles específicos o cotización personalizada, por favor completa el siguiente formulario:  \n        \n\t\t\t<webpageform>https://sstmexico.fillout.com/t/m7uT5H3gxpus</webpageform> \n\n        También puedes visitar nuestro sitio web para más información:  \n        \n\t\t\t<webpageejemplo>https://sstmexico.com/</webpageejemplo>\n\t\t</webpage>\n\t\t<meta>\n\t\tSi estás interesado en consultoría técnica para integración de APIs de Meta (WhatsApp Business, Facebook, Instagram) con tu CRM o sistemas de automatización, el precio varía según el alcance del servicio:\n\n\t\t• Consultoría técnica inicial y análisis de viabilidad: Precio personalizado\n\t\t• Integración de WhatsApp Business API con tu CRM: Precio personalizado  \n\t\t• Implementación de gestor de publicación automática: Precio personalizado\n\n\t\tPara recibir una cotización detallada acorde a tus objetivos específicos, contacta directamente a:\n        \n        \t\t• **Sergio Salazar** (Marketing Digital y Tecnología): \n                \n                \n                \n\t\t\t\t<a href=\"tel:5573333862\">5573333862</a>\n\n        O completa nuestro formulario de contacto general:  \n        \n\t\t\t<metaform>https://sstmexico.fillout.com/t/m7uT5H3gxpus</metaform>\n\t\t</meta>\n\t</respuesta_precios>\n\t<respuesta_fuera_alcance>\n\t\t<text>No tengo permitido responder esa pregunta o la información sobre eso no es una duda sobre nuestros servicios. Para más detalles, puedes llamarnos.  \n        - Sergio Salazar (Administración y Marketing Digital): 5573333862  \n        - Jesús Salazar (Desarrollo): 5648680084</text>\n\t</respuesta_fuera_alcance>\n\t<instrucciones_agente>\n    <instruccion>\n        Este chatbot debe responder únicamente a preguntas relacionadas con los servicios ofrecidos por SST México, los cuales incluyen: desarrollo de aplicaciones móviles y web, creación de sitios web empresariales y tiendas en línea, automatización de procesos, integración con APIs, soporte técnico, asesoría y consultoría tecnológica, consultoría técnica para integración de APIs de Meta y WhatsApp Business con CRMs y gestores de publicación automática, y desarrollo de agentes de IA. No debe brindar información sobre temas fuera de este ámbito, como matemáticas, problemas técnicos ajenos, community management, gestión de campañas publicitarias en redes sociales, u otras áreas no relacionadas con los servicios mencionados. En caso de recibir preguntas fuera de este alcance, responde de forma cordial indicando que la información solicitada no corresponde a nuestros servicios, y proporciona los datos de contacto (teléfono y correo) para mayor orientación.\n    </instruccion>\n\n    <instruccion>\n        Usa la herramienta de calendar para agendar citas cuando el usuario lo solicite. Antes de crear el evento, solicita la siguiente información:\n        - Nombre completo del usuario.\n        - Nombre del evento o motivo de la cita.\n        - Descripción breve del evento (objetivo o temas a tratar).\n        - Fecha y hora preferida.\n    </instruccion>\n\n    <instruccion>\n        Si el usuario consulta sobre servicios de desarrollo web, automatización, agentes de inteligencia artificial o consultoría técnica para integración de APIs de Meta/WhatsApp Business, proporciona rangos de precios aproximados según el tipo de proyecto:\n        - Sitios web básicos: aproximadamente $5,750 MXN.\n        - Sitios con integraciones o funcionalidades específicas: aproximadamente $13,750 MXN.\n        - Sitios avanzados con funciones personalizadas y recolección de datos: entre $20,000 y $30,000+ MXN.\n        - Consultoría técnica para integración de APIs de Meta/WhatsApp con CRMs: Precio variable según alcance. Contactar a Sergio Salazar (5573333862) para cotización personalizada.\n        Para solicitudes de desarrollo de aplicaciones móviles o web apps, redirígelo amablemente al cotizador correspondiente.\n    </instruccion>\n</instrucciones_agente>\n\n</agentInstructions>"
+          }
+        },
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "typeVersion": 1.7,
+        "position": [
+          -1264,
+          112
+        ],
+        "id": "959d7599-c645-46a1-b934-635555505ad0",
+        "name": "AI Agent"
+      },
+      {
+        "parameters": {
+          "sessionIdType": "customKey",
+          "sessionKey": "={{ $('WhatsApp Trigger').item.json.contacts[0].wa_id }}"
+        },
+        "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+        "typeVersion": 1.3,
+        "position": [
+          -1120,
+          320
+        ],
+        "id": "798a1b54-e8bc-418d-8629-036c4be0faab",
+        "name": "Window Buffer Memory"
+      },
+      {
+        "parameters": {
+          "operation": "send",
+          "phoneNumberId": "={{ $('WhatsApp Trigger').item.json.metadata.phone_number_id }}",
+          "recipientPhoneNumber": "=+52{{ $('WhatsApp Trigger').item.json.contacts[0].wa_id.slice(-10) }}",
+          "textBody": "={{ $json.output }}",
+          "additionalFields": {}
+        },
+        "type": "n8n-nodes-base.whatsApp",
+        "typeVersion": 1,
+        "position": [
+          -880,
+          112
+        ],
+        "id": "eb6bbab5-6579-4a23-b19d-bd301d66fc10",
+        "name": "WhatsApp Business Cloud",
+        "webhookId": "18dcc870-da80-47ef-af5a-f13c85ddfdfb",
+        "credentials": {
+          "whatsAppApi": {
+            "id": "BPSOIGTqAIdIoVMl",
+            "name": "WhatsApp account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "updates": [
+            "messages"
+          ],
+          "options": {
+            "messageStatusUpdates": [
+              "all"
+            ]
+          }
+        },
+        "type": "n8n-nodes-base.whatsAppTrigger",
+        "typeVersion": 1,
+        "position": [
+          -3248,
+          224
+        ],
+        "id": "ef322506-89b2-499d-b01d-4eb390db3ddd",
+        "name": "WhatsApp Trigger",
+        "webhookId": "956576c7-7130-4458-97c5-c128d923266c",
+        "notesInFlow": false,
+        "credentials": {
+          "whatsAppTriggerApi": {
+            "id": "EnYCB0TreWgsTuA7",
+            "name": "WhatsApp OAuth account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "conditions": {
+            "options": {
+              "caseSensitive": true,
+              "leftValue": "",
+              "typeValidation": "strict",
+              "version": 2
+            },
+            "conditions": [
+              {
+                "id": "8e16729e-1b67-4751-8b88-c20e195c4ba8",
+                "leftValue": "={{ $json.condition }}",
+                "rightValue": "=",
+                "operator": {
+                  "type": "boolean",
+                  "operation": "true",
+                  "singleValue": true
+                }
+              }
+            ],
+            "combinator": "and"
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.if",
+        "typeVersion": 2.2,
+        "position": [
+          -2576,
+          240
+        ],
+        "id": "4f815a0a-378c-48a7-b4f9-694ac30dfb26",
+        "name": "If"
+      },
+      {
+        "parameters": {},
+        "type": "n8n-nodes-base.noOp",
+        "typeVersion": 1,
+        "position": [
+          -2368,
+          368
+        ],
+        "id": "b7c59787-6e6a-4a61-9345-dc8e02d3bd07",
+        "name": "No Operation, do nothing"
+      },
+      {
+        "parameters": {
+          "rules": {
+            "values": [
+              {
+                "conditions": {
+                  "options": {
+                    "caseSensitive": true,
+                    "leftValue": "",
+                    "typeValidation": "strict",
+                    "version": 2
+                  },
+                  "conditions": [
+                    {
+                      "leftValue": "={{ $('WhatsApp Trigger').item.json.messages[0].type }}",
+                      "rightValue": "text",
+                      "operator": {
+                        "type": "string",
+                        "operation": "equals"
+                      },
+                      "id": "12197570-4c9e-4c29-b861-bfc174543afa"
+                    }
+                  ],
+                  "combinator": "and"
+                },
+                "renameOutput": true,
+                "outputKey": "text"
+              },
+              {
+                "conditions": {
+                  "options": {
+                    "caseSensitive": true,
+                    "leftValue": "",
+                    "typeValidation": "strict",
+                    "version": 2
+                  },
+                  "conditions": [
+                    {
+                      "id": "9c758c00-33e3-45dd-b975-2cdfa1002f62",
+                      "leftValue": "={{ $('WhatsApp Trigger').item.json.messages[0].type }}",
+                      "rightValue": "button",
+                      "operator": {
+                        "type": "string",
+                        "operation": "equals",
+                        "name": "filter.operator.equals"
+                      }
+                    }
+                  ],
+                  "combinator": "and"
+                }
+              },
+              {
+                "conditions": {
+                  "options": {
+                    "caseSensitive": true,
+                    "leftValue": "",
+                    "typeValidation": "strict",
+                    "version": 2
+                  },
+                  "conditions": [
+                    {
+                      "id": "a9b1eaab-7076-4ef3-bea6-27c247520d53",
+                      "leftValue": "={{ $('WhatsApp Trigger').item.json.messages[0].type }}",
+                      "rightValue": "image",
+                      "operator": {
+                        "type": "string",
+                        "operation": "equals",
+                        "name": "filter.operator.equals"
+                      }
+                    }
+                  ],
+                  "combinator": "and"
+                },
+                "renameOutput": true,
+                "outputKey": "image"
+              },
+              {
+                "conditions": {
+                  "options": {
+                    "caseSensitive": true,
+                    "leftValue": "",
+                    "typeValidation": "strict",
+                    "version": 2
+                  },
+                  "conditions": [
+                    {
+                      "id": "f62f7fab-4a0d-47ae-a0a7-f2a98515e6c6",
+                      "leftValue": "={{ $('WhatsApp Trigger').item.json.messages[0].type }}",
+                      "rightValue": "audio",
+                      "operator": {
+                        "type": "string",
+                        "operation": "equals",
+                        "name": "filter.operator.equals"
+                      }
+                    }
+                  ],
+                  "combinator": "and"
+                },
+                "renameOutput": true,
+                "outputKey": "audio"
+              },
+              {
+                "conditions": {
+                  "options": {
+                    "caseSensitive": true,
+                    "leftValue": "",
+                    "typeValidation": "strict",
+                    "version": 2
+                  },
+                  "conditions": [
+                    {
+                      "id": "2a8bad2a-ca7e-4f5d-8169-5b7dbcace4bc",
+                      "leftValue": "={{ $('WhatsApp Trigger').item.json.messages[0].type }}",
+                      "rightValue": "video",
+                      "operator": {
+                        "type": "string",
+                        "operation": "equals",
+                        "name": "filter.operator.equals"
+                      }
+                    }
+                  ],
+                  "combinator": "and"
+                },
+                "renameOutput": true,
+                "outputKey": "video"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.switch",
+        "typeVersion": 3.2,
+        "position": [
+          -2368,
+          64
+        ],
+        "id": "534e3552-75c4-46e8-a077-c9ed952830b1",
+        "name": "Switch"
+      },
+      {
+        "parameters": {
+          "resource": "media",
+          "operation": "mediaUrlGet",
+          "mediaGetId": "={{ $('WhatsApp Trigger').item.json.messages[0].audio.id }}"
+        },
+        "type": "n8n-nodes-base.whatsApp",
+        "typeVersion": 1,
+        "position": [
+          -2144,
+          192
+        ],
+        "id": "abfef629-bc93-4b15-a5f7-8656674283bd",
+        "name": "WhatsApp Business Cloud1",
+        "webhookId": "ccf16b0e-4029-4744-a006-8bebe3db64d3",
+        "credentials": {
+          "whatsAppApi": {
+            "id": "BPSOIGTqAIdIoVMl",
+            "name": "WhatsApp account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "url": "={{ $json.url }}",
+          "authentication": "predefinedCredentialType",
+          "nodeCredentialType": "whatsAppApi",
+          "options": {}
+        },
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.2,
+        "position": [
+          -1920,
+          192
+        ],
+        "id": "3276c64d-7e1c-4d56-8073-ef862ff32060",
+        "name": "HTTP Download",
+        "credentials": {
+          "whatsAppApi": {
+            "id": "BPSOIGTqAIdIoVMl",
+            "name": "WhatsApp account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "method": "POST",
+          "url": "https://api.deepgram.com/v1/listen",
+          "sendQuery": true,
+          "specifyQuery": "json",
+          "jsonQuery": "{\n  \"model\": \"nova-2-general\",\n  \"language\": \"es\",\n  \"punctuate\": true,\n  \"smart_format\": true,\n  \"diarize\": true,\n  \"detect_language\": false,\n  \"numerals\": true\n}\n",
+          "sendHeaders": true,
+          "headerParameters": {
+            "parameters": [
+              {
+                "name": "Authorization",
+                "value": "Token e02354d3605950beff932cec47417832a8b460f8"
+              },
+              {
+                "name": "Content-Type",
+                "value": "audio/opus"
+              }
+            ]
+          },
+          "sendBody": true,
+          "contentType": "binaryData",
+          "inputDataFieldName": "data",
+          "options": {}
+        },
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.2,
+        "position": [
+          -1696,
+          192
+        ],
+        "id": "034b3e2f-eb3e-4144-b995-42832b63e7d2",
+        "name": "HTTP Request"
+      },
+      {
+        "parameters": {
+          "assignments": {
+            "assignments": [
+              {
+                "id": "604810a7-59ad-4c4a-a9d7-aa27d56c9f4d",
+                "name": "type",
+                "value": "={{ $('WhatsApp Trigger').item.json.messages[0].type }}",
+                "type": "string"
+              },
+              {
+                "id": "a414d88b-5a0e-4071-a7c7-7a17242997fc",
+                "name": "mensaje",
+                "value": "={{ $if($('WhatsApp Trigger').item.json.messages[0].type!=\"text\", $('HTTP Request').item.json.results.channels[0].alternatives[0].transcript, $('WhatsApp Trigger').item.json.messages[0].text.body) }}\n",
+                "type": "string"
+              },
+              {
+                "id": "02faa4ba-b80d-4ba1-8ebf-784881f619c3",
+                "name": "nombre_remitente",
+                "value": "={{ $('WhatsApp Trigger').item.json.contacts[0].profile.name }}\n\n",
+                "type": "string"
+              },
+              {
+                "id": "3e935cf6-1811-433b-93ef-511cc4f2a468",
+                "name": "numero_remitente",
+                "value": "={{ $('WhatsApp Trigger').item.json.contacts[0].wa_id }}\n",
+                "type": "string"
+              },
+              {
+                "id": "5144c67d-eb6d-4b9b-933b-7e178e223d26",
+                "name": "numero_agent",
+                "value": "={{ $('WhatsApp Trigger').item.json.metadata.display_phone_number }}",
+                "type": "string"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.set",
+        "typeVersion": 3.4,
+        "position": [
+          -1488,
+          112
+        ],
+        "id": "adcfc38d-f477-4ef3-a411-05ae23489864",
+        "name": "condicional"
+      },
+      {
+        "parameters": {
+          "conditions": {
+            "options": {
+              "caseSensitive": true,
+              "leftValue": "",
+              "typeValidation": "loose",
+              "version": 2
+            },
+            "conditions": [
+              {
+                "id": "8900090b-3071-404f-8725-be70b3e6aebf",
+                "leftValue": "={{ $json.isEmpty() }}",
+                "rightValue": "=0",
+                "operator": {
+                  "type": "boolean",
+                  "operation": "true",
+                  "singleValue": true
+                }
+              }
+            ],
+            "combinator": "and"
+          },
+          "looseTypeValidation": true,
+          "options": {}
+        },
+        "type": "n8n-nodes-base.if",
+        "typeVersion": 2.2,
+        "position": [
+          -224,
+          112
+        ],
+        "id": "2acc6a37-b06b-4bc5-869a-75f5d392912b",
+        "name": "If1"
+      },
+      {
+        "parameters": {
+          "tableId": "mensajes",
+          "fieldsUi": {
+            "fieldValues": [
+              {
+                "fieldId": "id",
+                "fieldValue": "={{ [...Array(16)].map(() => 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'.charAt(Math.floor(Math.random() * 62))).join('') }}\n"
+              },
+              {
+                "fieldId": "conversacion_id",
+                "fieldValue": "={{ $json.id }}"
+              },
+              {
+                "fieldId": "remitente",
+                "fieldValue": "={{ $('Edit Fields').item.json.name_user.replace(/\\r?\\n|\\r/g, '') }}"
+              },
+              {
+                "fieldId": "contenido",
+                "fieldValue": "={{ $('Edit Fields').item.json.user_message_audio }}"
+              }
+            ]
+          }
+        },
+        "type": "n8n-nodes-base.supabase",
+        "typeVersion": 1,
+        "position": [
+          224,
+          0
+        ],
+        "id": "b10c3d1c-e464-4b13-8e8a-8b8a982d428d",
+        "name": "Supabase4",
+        "credentials": {
+          "supabaseApi": {
+            "id": "5N5HgkdmaNcuRz0s",
+            "name": "Supabase account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "tableId": "mensajes",
+          "fieldsUi": {
+            "fieldValues": [
+              {
+                "fieldId": "id",
+                "fieldValue": "={{ [...Array(16)].map(() => 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'.charAt(Math.floor(Math.random() * 62))).join('') }}\n"
+              },
+              {
+                "fieldId": "conversacion_id",
+                "fieldValue": "={{ $('Edit Fields').item.json.id_conversacion }}"
+              },
+              {
+                "fieldId": "remitente",
+                "fieldValue": "={{ $('Edit Fields').item.json.agente_ia_id }}"
+              },
+              {
+                "fieldId": "contenido",
+                "fieldValue": "={{ $('If1').item.json.respuesta }}{{ $('AI Agent').item.json.output }}"
+              }
+            ]
+          }
+        },
+        "type": "n8n-nodes-base.supabase",
+        "typeVersion": 1,
+        "position": [
+          448,
+          0
+        ],
+        "id": "f6389a69-f413-4cd2-be16-aabc0a825ea4",
+        "name": "Supabase5",
+        "credentials": {
+          "supabaseApi": {
+            "id": "5N5HgkdmaNcuRz0s",
+            "name": "Supabase account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "assignments": {
+            "assignments": [
+              {
+                "id": "acffd096-6a3c-4359-95d4-bb87090b4d5c",
+                "name": "id_conversacion",
+                "value": "={{ $json.contacts[0].input }}_{{ $('condicional').item.json.numero_agent }}",
+                "type": "string"
+              },
+              {
+                "id": "1581ac48-de1a-492b-b243-728655228d51",
+                "name": "numero_waba_id",
+                "value": "={{ $('condicional').item.json.numero_agent }}",
+                "type": "string"
+              },
+              {
+                "id": "8218588d-48e9-4155-8f6b-08976c71d975",
+                "name": "agente_ia_id",
+                "value": "={{ $workflow.name }}",
+                "type": "string"
+              },
+              {
+                "id": "4eba6cb4-e7f8-4c97-8890-33af9735882c",
+                "name": "name_user",
+                "value": "={{ $('condicional').item.json.nombre_remitente }}",
+                "type": "string"
+              },
+              {
+                "id": "b597b4c1-8f55-4f71-83ed-553de20db4af",
+                "name": "user_message_audio",
+                "value": "={{ $('condicional').item.json.mensaje }}",
+                "type": "string"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.set",
+        "typeVersion": 3.4,
+        "position": [
+          -656,
+          112
+        ],
+        "id": "15bf84d2-dd9a-4ccf-a551-863615933402",
+        "name": "Edit Fields"
+      },
+      {
+        "parameters": {
+          "operation": "getAll",
+          "tableId": "conversaciones",
+          "returnAll": true,
+          "matchType": "allFilters",
+          "filters": {
+            "conditions": [
+              {
+                "keyName": "id",
+                "condition": "eq",
+                "keyValue": "={{ $json.id_conversacion }}"
+              }
+            ]
+          }
+        },
+        "type": "n8n-nodes-base.supabase",
+        "typeVersion": 1,
+        "position": [
+          -448,
+          112
+        ],
+        "id": "8acbaad8-7caa-47d7-b4b1-e7f56c046158",
+        "name": "GET id_Conversation",
+        "alwaysOutputData": true,
+        "credentials": {
+          "supabaseApi": {
+            "id": "5N5HgkdmaNcuRz0s",
+            "name": "Supabase account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "tableId": "conversaciones",
+          "fieldsUi": {
+            "fieldValues": [
+              {
+                "fieldId": "id",
+                "fieldValue": "={{ $('Edit Fields').item.json.id_conversacion }}"
+              },
+              {
+                "fieldId": "numero_waba_id",
+                "fieldValue": "={{ $('Edit Fields').item.json.numero_waba_id }}"
+              },
+              {
+                "fieldId": "agente_ia_id",
+                "fieldValue": "={{ $('Edit Fields').item.json.agente_ia_id }}"
+              },
+              {
+                "fieldId": "cliente",
+                "fieldValue": "={{ $('Edit Fields').item.json.name_user.replace(/\\r?\\n|\\r/g, '') }}"
+              },
+              {
+                "fieldId": "agente",
+                "fieldValue": "={{ $workflow.name }}"
+              },
+              {
+                "fieldId": "isActive",
+                "fieldValue": "={{ true }}"
+              },
+              {
+                "fieldId": "Id_waba_agent",
+                "fieldValue": "={{ $('WhatsApp Trigger').item.json.metadata.phone_number_id }}"
+              }
+            ]
+          }
+        },
+        "type": "n8n-nodes-base.supabase",
+        "typeVersion": 1,
+        "position": [
+          0,
+          0
+        ],
+        "id": "e9cbd901-a0f1-405a-bfc1-ad9d8dbba4a2",
+        "name": "Create conversation",
+        "credentials": {
+          "supabaseApi": {
+            "id": "5N5HgkdmaNcuRz0s",
+            "name": "Supabase account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "operation": "get",
+          "tableId": "conversaciones",
+          "filters": {
+            "conditions": [
+              {
+                "keyName": "id",
+                "keyValue": "=52{{ $json.contacts[0].wa_id.substring(3) }}_{{ $json.metadata.display_phone_number }}"
+              }
+            ]
+          }
+        },
+        "type": "n8n-nodes-base.supabase",
+        "typeVersion": 1,
+        "position": [
+          -3024,
+          240
+        ],
+        "id": "2a357754-bdbf-4529-9e4e-71a03d801dab",
+        "name": "Supabase",
+        "alwaysOutputData": true,
+        "credentials": {
+          "supabaseApi": {
+            "id": "5N5HgkdmaNcuRz0s",
+            "name": "Supabase account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "jsCode": "const items = $input.all();\nconst condition =\n  items.length === 1 || (items.length > 1 && items[0]?.json?.isActive === true);\n\nreturn [{ json: { condition } }];\n"
+        },
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          -2800,
+          240
+        ],
+        "id": "9285057f-e3c4-4480-b93c-b93d25790c33",
+        "name": "Code"
+      },
+      {
+        "parameters": {
+          "tableId": "mensajes",
+          "fieldsUi": {
+            "fieldValues": [
+              {
+                "fieldId": "id",
+                "fieldValue": "={{ [...Array(16)].map(() => 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'.charAt(Math.floor(Math.random() * 62))).join('') }}\n"
+              },
+              {
+                "fieldId": "conversacion_id",
+                "fieldValue": "={{ $json.id }}"
+              },
+              {
+                "fieldId": "remitente",
+                "fieldValue": "={{ $('Edit Fields').item.json.name_user.replace(/\\r?\\n|\\r/g, '') }}"
+              },
+              {
+                "fieldId": "contenido",
+                "fieldValue": "={{ $('Edit Fields').item.json.user_message_audio }}"
+              }
+            ]
+          }
+        },
+        "type": "n8n-nodes-base.supabase",
+        "typeVersion": 1,
+        "position": [
+          0,
+          208
+        ],
+        "id": "7ac7a08e-a9e3-4a74-bd45-70769021461b",
+        "name": "Supabase8",
+        "credentials": {
+          "supabaseApi": {
+            "id": "5N5HgkdmaNcuRz0s",
+            "name": "Supabase account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "tableId": "mensajes",
+          "fieldsUi": {
+            "fieldValues": [
+              {
+                "fieldId": "id",
+                "fieldValue": "={{ [...Array(16)].map(() => 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'.charAt(Math.floor(Math.random() * 62))).join('') }}\n"
+              },
+              {
+                "fieldId": "conversacion_id",
+                "fieldValue": "={{ $('Edit Fields').item.json.id_conversacion }}"
+              },
+              {
+                "fieldId": "remitente",
+                "fieldValue": "={{ $('Edit Fields').item.json.agente_ia_id }}"
+              },
+              {
+                "fieldId": "contenido",
+                "fieldValue": "={{ $('If1').item.json.respuesta }}{{ $('AI Agent').item.json.output }}"
+              }
+            ]
+          }
+        },
+        "type": "n8n-nodes-base.supabase",
+        "typeVersion": 1,
+        "position": [
+          224,
+          208
+        ],
+        "id": "66be5d12-f40d-4f6a-bda9-76f2461584f5",
+        "name": "Supabase9",
+        "credentials": {
+          "supabaseApi": {
+            "id": "5N5HgkdmaNcuRz0s",
+            "name": "Supabase account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "calendar": {
+            "__rl": true,
+            "value": "=sstmex.adm@gmail.com",
+            "mode": "id",
+            "__regex": "(^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*)"
+          },
+          "start": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Start', ``, 'string') }}",
+          "end": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('End', ``, 'string') }}",
+          "useDefaultReminders": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Use_Default_Reminders', ``, 'boolean') }}",
+          "additionalFields": {
+            "description": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Description', ``, 'string') }}",
+            "summary": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Summary', ``, 'string') }}"
+          }
+        },
+        "type": "n8n-nodes-base.googleCalendarTool",
+        "typeVersion": 1.3,
+        "position": [
+          -896,
+          368
+        ],
+        "id": "b3ee982f-67eb-41dc-8373-d036e6f702dd",
+        "name": "Google Calendar",
+        "credentials": {
+          "googleCalendarOAuth2Api": {
+            "id": "OkjEtSz0enlLJr0J",
+            "name": "Google Calendar account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "model": "openrouter/free",
+          "options": {}
+        },
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+        "typeVersion": 1,
+        "position": [
+          -1408,
+          320
+        ],
+        "id": "e89af87a-ee3e-46c0-b46b-387c1847118d",
+        "name": "OpenRouter Chat Model",
+        "credentials": {
+          "openRouterApi": {
+            "id": "hdrYzQzMvwO4LvN7",
+            "name": "OpenRouter account"
+          }
+        }
+      }
+    ],
+    "connections": {
+      "AI Agent": {
+        "main": [
+          [
+            {
+              "node": "WhatsApp Business Cloud",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Window Buffer Memory": {
+        "ai_memory": [
+          [
+            {
+              "node": "AI Agent",
+              "type": "ai_memory",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "WhatsApp Trigger": {
+        "main": [
+          [
+            {
+              "node": "Supabase",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "If": {
+        "main": [
+          [
+            {
+              "node": "Switch",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "No Operation, do nothing",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Switch": {
+        "main": [
+          [
+            {
+              "node": "condicional",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "condicional",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [],
+          [
+            {
+              "node": "WhatsApp Business Cloud1",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "WhatsApp Business Cloud1": {
+        "main": [
+          [
+            {
+              "node": "HTTP Download",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "HTTP Download": {
+        "main": [
+          [
+            {
+              "node": "HTTP Request",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "HTTP Request": {
+        "main": [
+          [
+            {
+              "node": "condicional",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "condicional": {
+        "main": [
+          [
+            {
+              "node": "AI Agent",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "WhatsApp Business Cloud": {
+        "main": [
+          [
+            {
+              "node": "Edit Fields",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "If1": {
+        "main": [
+          [
+            {
+              "node": "Create conversation",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "Supabase8",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Supabase4": {
+        "main": [
+          [
+            {
+              "node": "Supabase5",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Edit Fields": {
+        "main": [
+          [
+            {
+              "node": "GET id_Conversation",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "GET id_Conversation": {
+        "main": [
+          [
+            {
+              "node": "If1",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Create conversation": {
+        "main": [
+          [
+            {
+              "node": "Supabase4",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Supabase": {
+        "main": [
+          [
+            {
+              "node": "Code",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Code": {
+        "main": [
+          [
+            {
+              "node": "If",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Supabase8": {
+        "main": [
+          [
+            {
+              "node": "Supabase9",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Google Calendar": {
+        "ai_tool": [
+          [
+            {
+              "node": "AI Agent",
+              "type": "ai_tool",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "OpenRouter Chat Model": {
+        "ai_languageModel": [
+          [
+            {
+              "node": "AI Agent",
+              "type": "ai_languageModel",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "authors": "Jesús Emmanuel Salazar Cruz",
+    "name": "Version 1b14ac9c",
+    "description": "",
+    "autosaved": true,
+    "workflowPublishHistory": [
+      {
+        "createdAt": "2026-03-26T20:22:20.076Z",
+        "id": 61,
+        "workflowId": "llUinMjQxIejMY8S",
+        "versionId": "1b14ac9c-5ca8-4e72-afb7-562c15822bf8",
+        "event": "activated",
+        "userId": "7941b074-95dc-4dd0-91c8-dbe272de34d4"
+      },
+      {
+        "createdAt": "2026-03-27T01:39:51.059Z",
+        "id": 64,
+        "workflowId": "llUinMjQxIejMY8S",
+        "versionId": "1b14ac9c-5ca8-4e72-afb7-562c15822bf8",
+        "event": "deactivated",
+        "userId": "7941b074-95dc-4dd0-91c8-dbe272de34d4"
+      },
+      {
+        "createdAt": "2026-03-27T01:39:52.247Z",
+        "id": 65,
+        "workflowId": "llUinMjQxIejMY8S",
+        "versionId": "1b14ac9c-5ca8-4e72-afb7-562c15822bf8",
+        "event": "activated",
+        "userId": "7941b074-95dc-4dd0-91c8-dbe272de34d4"
+      }
+    ]
+  }
+}

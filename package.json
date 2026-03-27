@@ -1,9 +1,17 @@
 {
-  "name": "sst-content-automation",
+  "name": "n8n-workflows",
   "version": "1.0.0",
-  "description": "Sistema de generación automática de contenido para SST México",
-  "scripts": {},
-  "keywords": ["n8n", "workflow", "automation"],
+  "description": "Colección de workflows n8n para SST México",
+  "scripts": {
+    "init": "node scripts/init.js",
+    "workflow:list": "node scripts/list.js",
+    "workflow:download": "node scripts/download.js"
+  },
+  "keywords": ["n8n", "workflow", "automation", "sst"],
   "author": "SST México",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1"
+  }
 }
